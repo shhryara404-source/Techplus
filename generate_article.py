@@ -8,28 +8,42 @@ client = InferenceClient(token=HF_TOKEN)
 
 topic = "پیشرفت‌های جدید در هوش مصنوعی و فناوری"
 
-def generate_article(prompt):
+def generate_english(prompt):
     try:
         response = client.text_generation(
-            model="distilgpt2",
+            model="gpt2",          # بسیار پایدار، انگلیسی
             prompt=prompt,
-            max_new_tokens=800,
+            max_new_tokens=600,
             temperature=0.7,
+            stream=False
         )
         return response.strip()
     except Exception as e:
-        print(f"خطا در تولید متن: {type(e).__name__}: {e}")
-        # اگر پاسخ خطا شامل جزئیات بیشتری است، آن را هم چاپ کن
-        if hasattr(e, 'response'):
-            print("Response text:", e.response.text)
-        return "محتوای مقاله در این لحظه در دسترس نیست."
+        print(f"خطای انگلیسی: {e}")
+        return "English content not available at this moment."
 
-prompt_fa = f"یک مقاله جامع به زبان فارسی درباره این موضوع بنویس: {topic}. حداقل ۴ پاراگراف."
+def generate_persian(prompt):
+    try:
+        # مدل فارسی رایگان و پایدار
+        response = client.text_generation(
+            model="persiannlp/parsi-gpt2",
+            prompt=prompt,
+            max_new_tokens=600,
+            temperature=0.7,
+            stream=False
+        )
+        return response.strip()
+    except Exception as e:
+        print(f"خطای فارسی: {e}")
+        return "محتوای فارسی در این لحظه در دسترس نیست."
+
 prompt_en = f"Write a detailed article in English about: {topic}. Minimum 4 paragraphs."
+prompt_fa = f"یک مقاله جامع به زبان فارسی درباره این موضوع بنویس: {topic}. حداقل ۴ پاراگراف."
 
-article_fa = generate_article(prompt_fa)
-article_en = generate_article(prompt_en)
+article_en = generate_english(prompt_en)
+article_fa = generate_persian(prompt_fa)
 
+# ذخیره در فایل
 with open("articles.json", "r", encoding="utf-8") as f:
     articles = json.load(f)
 
