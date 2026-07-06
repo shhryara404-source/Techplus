@@ -1,189 +1,308 @@
 [
   {
     "id": 1,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "AI",
+    "date": "۱۴۰۴/۰۱/۱۵",
     "title": {
-      "fa": "پیشرفت‌های جدید در هوش مصنوعی و فناوری",
-      "en": "پیشرفت‌های جدید در هوش مصنوعی و فناوری"
+      "fa": "از رویا تا واقعیت؛ سفری به اعماق مغز دیجیتال",
+      "en": "From Dream to Reality: A Journey into the Digital Brain"
     },
     "excerpt": {
-      "fa": "محتوای مقاله در این لحظه در دسترس نیست....",
-      "en": "محتوای مقاله در این لحظه در دسترس نیست...."
+      "fa": "تا همین چند سال پیش، هوش مصنوعی فقط در فیلم‌های علمی‑تخیلی دیده می‌شد. اما امروز، این فناوری در زندگی روزمره‌ی ما رخنه کرده است. در این مقاله، با مفاهیم پایه، تاریخچه، و نحوه‌ی کار هوش مصنوعی آشنا می‌شوید...",
+      "en": "Until a few years ago, artificial intelligence was confined to science fiction. Today, it permeates our daily lives. In this article, you’ll learn the basics, history, and inner workings of AI..."
     },
     "body": {
-      "fa": "<p>محتوای مقاله در این لحظه در دسترس نیست.</p>",
-      "en": "<p>محتوای مقاله در این لحظه در دسترس نیست.</p>"
+      "fa": "<p>تا همین چند سال پیش، وقتی صحبت از «ماشین‌های هوشمند» می‌شد، ذهن بیشتر ما به سمت فیلم‌های علمی‑تخیلی و ربات‌های انسان‌نما می‌رفت. اما امروز، هوش مصنوعی دیگر یک رویای دوردست نیست؛ بلکه هم‌نشین روزمره‌ی همه‌ی ما شده است. از لحظه‌ای که صبح از خواب بیدار می‌شوید و دستیار صوتی گوشی‌تان زنگ هشدار را خاموش می‌کند، تا وقتی که شب هنگام، شبکه‌های اجتماعی فیلمی را به شما پیشنهاد می‌دهند که دقیقاً مطابق سلیقه‌تان است—همه‌جا ردپایی از هوش مصنوعی دیده می‌شود. اما این فناوری شگفت‌انگیز دقیقاً چیست و چگونه کار می‌کند؟ بیایید با هم سفری به اعماق این مغز دیجیتال داشته باشیم.</p><p>هوش مصنوعی یا Artificial Intelligence (که به اختصار AI نامیده می‌شود)، در ساده‌ترین تعریف، به توانایی تفکر، یادگیری و تصمیم‌گیری یک ماشین یا سیستم کامپیوتری گفته می‌شود. اما این تعریف ساده، گوهر حقیقی این پدیده را پنهان می‌کند. هوش مصنوعی در واقع مجموعه‌ای از تکنیک‌ها و الگوریتم‌های ریاضی و کامپیوتری است که برای تقلید از هوش و یادگیری انسان‌ها طراحی شده‌اند. به بیان دیگر، به هوشی که یک ماشین در شرایط مختلف از خود نشان می‌دهد، هوش مصنوعی گفته می‌شود.</p><p>شاید جالب باشد بدانید که هوش مصنوعی به عنوان یک شاخه‌ی آکادمیک، برای اولین بار در سال ۱۹۵۶ میلادی در کنفرانس تابستانی دارتموث، توسط جان مک‌کارتی (John McCarthy) پایه‌گذاری شد. مک‌کارتی، دانشمند علوم کامپیوتر و شناختی، برای اولین بار اصطلاح «هوش مصنوعی» را ابداع کرد و از آن زمان تا کنون، این حوزه دستخوش فراز و نشیب‌های بسیاری شده است.</p><p>هدف نهایی از طراحی و ساخت سیستم‌های هوش مصنوعی، خلق ابزارهایی نرم‌افزاری و سخت‌افزاری است که بتوانند کارهایی مانند استدلال، تصمیم‌گیری، یادگیری و حل مسئله را تا حدی شبیه به انسان—و حتی گاهی دقیق‌تر از او—انجام دهند. تا همین چند سال پیش، بسیاری از این کارها فقط از عهده‌ی انسان برمی‌آمد و سیستم‌های کامپیوتری در انجام آنها ناتوان بودند. اما امروز، شاهد پیشرفت‌هایی هستیم که پیش‌تر تنها در فیلم‌های علمی‑تخیلی قابل تصور بودند.</p><p>یکی از رایج‌ترین سردرگمی‌ها در این حوزه، تفاوت میان سه مفهوم هوش مصنوعی، یادگیری ماشین (Machine Learning) و یادگیری عمیق (Deep Learning) است. بهتر است این سه را به صورت یک هرم سه‌لایه تصور کنید:</p><ul><li>هوش مصنوعی (لایه‌ی بالایی و گسترده‌ترین): همه‌ی تلاش‌ها برای ساخت ماشین‌های هوشمند را در بر می‌گیرد.</li><li>یادگیری ماشین (لایه‌ی میانی): زیرمجموعه‌ای از هوش مصنوعی است که به ماشین‌ها توانایی یادگیری از داده‌ها را می‌دهد، بدون اینکه برای هر کار خاصی برنامه‌نویسی شوند.</li><li>یادگیری عمیق (لایه‌ی پایینی و تخصصی‌ترین): زیرمجموعه‌ای از یادگیری ماشین است که از شبکه‌های عصبی با لایه‌های متعدد برای پردازش داده‌ها استفاده می‌کند و الهام‌گرفته از ساختار مغز انسان است.</li></ul><p>سیستم‌های هوش مصنوعی، به ویژه مدل‌های بزرگ زبانی (Large Language Models) مانند ChatGPT، کلمات را به‌صورت مستقیم درک نمی‌کنند. در واقع، آنها کلمات را به کدهای عددی به نام توکن (Token) تبدیل کرده و بر اساس احتمالات ریاضی، کلمه‌ی بعدی را پیش‌بینی می‌کنند. این یعنی وقتی شما با یک چت‌بات صحبت می‌کنید، در واقع با یک ماشین حساب پیشرفته‌ی احتمالات در حال مکالمه هستید!</p><p>فرآیند کار به این شکل است که مدل‌های هوش مصنوعی روی حجم عظیمی از داده‌ها—متون، تصاویر، صداها و ...—آموزش می‌بینند. در طی این آموزش، آنها الگوها، روابط و ساختارهای پنهان در داده‌ها را شناسایی می‌کنند. پس از اتمام آموزش، وقتی شما یک سوال یا دستور (پرامپت) به آنها می‌دهید، از همان الگوهای آموخته‌شده برای تولید پاسخی استفاده می‌کنند که از نظر آماری محتمل‌ترین پاسخ به ورودی شماست.</p><p>هوش مصنوعی تنها به چت‌بات‌ها خلاصه نمی‌شود. این فناوری در شاخه‌های گوناگونی ظهور پیدا کرده است:</p><ul><li>پردازش زبان طبیعی (NLP): توانایی درک، تفسیر و تولید زبان انسانی. همان چیزی که به چت‌بات‌هایی مانند ChatGPT و Gemini قدرت می‌دهد.</li><li>بینایی ماشین (Computer Vision): توانایی دیدن و تفسیر تصاویر و ویدیوها؛ از تشخیص چهره در گوشی‌های هوشمند تا خودروهای خودران.</li><li>رباتیک: ترکیب هوش مصنوعی با سخت‌افزار برای ساخت ربات‌هایی که بتوانند در دنیای فیزیکی عمل کنند.</li><li>سیستم‌های توصیه‌گر: الگوریتم‌هایی که بر اساس سلیقه و رفتار شما، محتوای مناسب را در یوتیوب، نتفلیکس یا آمازون به شما پیشنهاد می‌دهند.</li></ul><p>هوش مصنوعی یک تکنولوژی نیست؛ یک انقلاب است. انقلابی که نحوه‌ی کار، زندگی و تعامل ما با جهان را دگرگون می‌کند. درک اصول پایه‌ی این فناوری، اولین و مهم‌ترین گام برای استفاده‌ی حرفه‌ای از آن است.</p>",
+      "en": "<p>Until a few years ago, the phrase 'intelligent machines' brought to mind sci‑fi movies and humanoid robots. Today, artificial intelligence is no longer a distant dream – it’s a daily companion. From the moment your phone’s voice assistant wakes you up to the personalized video recommendations on social media at night, AI leaves its footprint everywhere. But what exactly is this astonishing technology and how does it work? Let’s embark on a journey into this digital brain.</p><p>Artificial Intelligence (AI) is, in the simplest definition, the ability of a machine or computer system to think, learn, and make decisions. However, this simple definition conceals the true essence of the phenomenon. AI is actually a collection of mathematical and computational techniques and algorithms designed to mimic human intelligence and learning. In other words, the intelligence that a machine exhibits in various situations is what we call artificial intelligence.</p><p>Interestingly, AI as an academic discipline was first established in 1956 at the Dartmouth Summer Conference by John McCarthy. McCarthy, a computer and cognitive scientist, coined the term 'artificial intelligence'. Since then, the field has seen many ups and downs – sometimes waves of optimism, sometimes funding shortages and despair.</p><p>The ultimate goal of AI is to create software and hardware tools that can reason, make decisions, learn, and solve problems – sometimes even more accurately than humans. Until recently, many such tasks were solely human domains; today, we are witnessing advances once only imaginable in science fiction.</p><p>One common confusion in this field is the difference between artificial intelligence, machine learning, and deep learning. Imagine them as a three‑layer pyramid:</p><ul><li>Artificial Intelligence (top, broadest layer): encompasses all efforts to build intelligent machines.</li><li>Machine Learning (middle layer): a subset of AI that gives machines the ability to learn from data without being explicitly programmed.</li><li>Deep Learning (bottom, most specialized layer): a subset of machine learning that uses multi‑layered neural networks to process data, inspired by the structure of the human brain.</li></ul><p>AI systems, especially large language models like ChatGPT, don’t understand words directly. They convert words into numerical codes called tokens and predict the next word based on mathematical probabilities. So when you chat with a bot, you are essentially conversing with an advanced probability calculator!</p><p>The process works by training models on vast amounts of data – text, images, audio, etc. During training, they identify hidden patterns, relationships, and structures. After training, when you give them a prompt, they use those learned patterns to generate the statistically most probable response.</p><p>AI is not limited to chatbots; it shines in many branches:</p><ul><li>Natural Language Processing (NLP): understanding, interpreting, and generating human language – the power behind ChatGPT and Gemini.</li><li>Computer Vision: seeing and interpreting images and videos; from facial recognition in smartphones to self‑driving cars.</li><li>Robotics: combining AI with hardware to build robots that act in the physical world.</li><li>Recommendation Systems: algorithms that suggest relevant content on YouTube, Netflix, or Amazon based on your tastes and behaviour.</li></ul><p>AI is not just a technology; it is a revolution that is reshaping how we work, live, and interact with the world. Understanding its fundamentals is the first and most crucial step toward using it professionally.</p>"
     }
   },
   {
     "id": 2,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "AI",
+    "date": "۱۴۰۴/۰۱/۱۶",
     "title": {
-      "fa": "پیشرفت‌های جدید در هوش مصنوعی و فناوری",
-      "en": "پیشرفت‌های جدید در هوش مصنوعی و فناوری"
+      "fa": "هنر گفت‌وگو با ماشین؛ راهنمای گام‌به‌گام پرامپت‌نویسی حرفه‌ای",
+      "en": "The Art of Talking to Machines: A Step‑by‑Step Guide to Professional Prompt Engineering"
     },
     "excerpt": {
-      "fa": "محتوای مقاله در این لحظه در دسترس نیست....",
-      "en": "محتوای مقاله در این لحظه در دسترس نیست...."
+      "fa": "حتماً برایتان پیش آمده که با چت‌باتی صحبت کرده‌اید اما پاسخ‌های سطحی دریافت کرده‌اید. ریشه‌ی مشکل در عدم نگارش صحیح پرامپت است. در این مقاله، هنر پرامپت‌نویسی را با فرمول شش‌گانه و تکنیک‌های پیشرفته یاد می‌گیرید...",
+      "en": "You’ve probably chatted with a bot and received shallow answers. The root cause is improper prompt writing. In this article, learn the art of prompt engineering through a six‑step formula and advanced techniques..."
     },
     "body": {
-      "fa": "<p>محتوای مقاله در این لحظه در دسترس نیست.</p>",
-      "en": "<p>محتوای مقاله در این لحظه در دسترس نیست.</p>"
+      "fa": "<p>حتماً برای شما هم پیش آمده که با چت‌باتی مانند ChatGPT یا Gemini صحبت کرده‌اید، اما پاسخ‌هایی سطحی، کلیشه‌ای و گاهی کاملاً اشتباه دریافت کرده‌اید. شاید هم از خودتان پرسیده‌اید: «مگر این هوش مصنوعی نمی‌تواند حرف مرا بفهمد؟» ریشه‌ی این مشکل در یک سوءتفاهم بزرگ نهفته است: این تصور که هوش مصنوعی کلمات را مانند انسان درک می‌کند! در حالی که همان‌طور که در مقاله‌ی اول گفتیم، مدل‌های زبانی کلمات را به کدهای عددی تبدیل کرده و بر اساس احتمالات ریاضی پاسخ می‌دهند.</p><p>اینجاست که مهندسی پرامپت (Prompt Engineering) یا همان هنر پرامپت‌نویسی وارد میدان می‌شود. پرامپت‌نویسی فرایندی است که در آن از دانش و مهارت‌های مختلف برای ایجاد دستورالعمل‌های مؤثر برای مدل‌های هوش مصنوعی استفاده می‌شود. به زبان ساده‌تر، پرامپت‌نویسی یعنی هنرِ درست سوال پرسیدن و دستور دادن به هوش مصنوعی برای گرفتن بهترین و درست‌ترین نتیجه. پرامپت‌نویسی امروز دیگر یک مهارت امتیازی نیست؛ بلکه یک توانمندی ضروری برای همه‌ی ما در دنیای امروز است.</p><p>پرامپت (Prompt) به متن یا ورودی‌ای گفته می‌شود که کاربر به یک مدل زبانی بزرگ ارائه می‌دهد تا مدل بر اساس آن پاسخی تولید کند. هدف از پرامپت، ارائه‌ی اطلاعات کافی به مدل برای تولید پاسخ مطلوب است.</p><p>کیفیت پاسخ‌های تولیدشده توسط مدل‌های زبانی، به شدت به کیفیت ورودی (پرامپت) وابسته است. وقتی اصول پرامپت‌نویسی را اعمال می‌کنید، انگار در حال برنامه‌نویسی به زبان طبیعی هستید؛ اما به جای کدنویسی، با کلمات خود مسیر احتمالات ریاضی مدل را هدایت می‌کنید.</p><p>بر اساس آموزه‌های دوره‌های مهندسی پرامپت گوگل و سایر منابع معتبر، یک پرامپت حرفه‌ای از شش بخش کلیدی تشکیل شده است که به ترتیب اهمیت عبارتند از:</p><ol><li><strong>وظیفه (Task)</strong> — اولویت اول و اجباری: دستور خود را همیشه با یک فعل امری دقیق آغاز کنید.</li><li><strong>زمینه (Context)</strong> — داستان را کامل کنید: پیش‌زمینه، موفقیت و محیط استفاده را توضیح دهید.</li><li><strong>نمونه‌ها (Exemplars / Few-shot)</strong> — الگو دهید: ارائه‌ی چند نمونه ورودی و خروجی به مدل، کیفیت را به شدت افزایش می‌دهد.</li><li><strong>نقش (Persona)</strong> — به مدل هویت بدهید: مشخص کنید با چه شخصیت یا تخصصی صحبت کند.</li><li><strong>قالب (Format)</strong> — ساختار خروجی را مشخص کنید: جدول، JSON، متن پاراگراف‌بندی‌شده، یا لیست.</li><li><strong>لحن (Tone)</strong> — فضا را تعیین کنید: رسمی، خودمانی، طنز، همدلانه یا آموزشی.</li></ol><p>نکته‌ی طلایی: هدایت کردن (Steering) مدل با جزئیات، همیشه نتیجه‌ی بهتری نسبت به فرمان دادن (Commanding) ساده دارد.</p><p>علاوه بر فرمول شش‌گانه، تکنیک‌های پیشرفته‌تری نیز وجود دارند:</p><ul><li><strong>تفکر زنجیره‌ای (Chain of Thought - CoT):</strong> از مدل بخواهید مراحل استدلال خود را گام‌به‌گام توضیح دهد.</li><li><strong>تکنیک‌های Zero-Shot و One-Shot:</strong> انجام کار بدون نمونه یا با یک نمونه.</li><li><strong>تکنیک RAG:</strong> ترکیب بازیابی اطلاعات از منبع خارجی با پرامپت.</li></ul><p>اشتباهات رایج شامل پرامپت‌های خیلی کوتاه، نداشتن دستورالعمل واضح، و انتظار معجزه است.</p><p>یک مثال از پرامپت ضعیف: «یک پست اینستاگرامی برای محصول جدیدم بنویس.» پرامپت حرفه‌ای: «به عنوان یک متخصص تولید محتوا با ۵ سال تجربه در حوزه‌ی مد و فشن، یک پست اینستاگرامی برای معرفی یک کیف چرمی جدید بنویس. مخاطب هدف، زنان ۲۵ تا ۴۰ ساله هستند. لحن پست گرم، صمیمی و الهام‌بخش باشد و در عین حال حس برند لوکس را منتقل کند. پست را با یک تیتر جذاب شروع کن، سپس یک داستان کوتاه درباره‌ی نحوه‌ی ساخت کیف بنویس، و در انتها با یک دعوت به اقدام تمام کن. از سه پاراگراف ۲-۳ خطی استفاده کن.»</p><p>پرامپت‌نویسی یک مهارت است. هرچه بیشتر تمرین کنید، بهتر می‌شوید.</p>",
+      "en": "<p>You’ve likely experienced chatting with a bot like ChatGPT or Gemini, only to receive shallow, generic, or completely wrong answers. You might have wondered, 'Can’t this AI understand what I mean?' The root of the problem is a big misconception: that AI understands words like a human. As we explained in the first article, language models convert words into numerical tokens and respond based on mathematical probabilities.</p><p>This is where Prompt Engineering comes in – the art of crafting effective instructions for AI models. In simple terms, prompt engineering means asking the right questions and giving the right commands to get the best possible results. Today, prompt engineering is no longer an optional skill; it’s essential for everyone.</p><p>A prompt is the text or input a user gives to a large language model so that the model can generate a response. The goal is to provide enough information for the desired output.</p><p>The quality of the generated responses heavily depends on the quality of the input. When you apply prompt‑engineering principles, it’s like programming in natural language – steering the model’s mathematical probabilities with your words.</p><p>Based on Google’s prompt engineering courses and other reliable sources, a professional prompt consists of six key components, in order of importance:</p><ol><li><strong>Task</strong> – top priority and mandatory: always start with a precise action verb.</li><li><strong>Context</strong> – tell the whole story: background, definition of success, and the environment.</li><li><strong>Exemplars / Few‑shot</strong> – provide examples: a few input‑output pairs drastically improve quality.</li><li><strong>Persona</strong> – give the model an identity: specify the character or expertise to adopt.</li><li><strong>Format</strong> – define the output structure: table, JSON, paragraphs, or bullet list.</li><li><strong>Tone</strong> – set the mood: formal, casual, humorous, empathetic, or educational.</li></ol><p>Golden tip: steering the model with details always yields better results than simple commanding.</p><p>Beyond the six‑step formula, there are advanced techniques:</p><ul><li><strong>Chain of Thought (CoT):</strong> ask the model to explain its reasoning step‑by‑step.</li><li><strong>Zero‑Shot / One‑Shot:</strong> performing a task with no examples or just one example.</li><li><strong>RAG (Retrieval‑Augmented Generation):</strong> combining external information retrieval with the prompt.</li></ul><p>Common mistakes include overly short prompts, unclear instructions, and expecting miracles.</p><p>Example of a weak prompt: 'Write an Instagram post for my new product.' A professional prompt: 'As a content marketing specialist with 5 years of experience in the fashion industry, write an Instagram post to introduce a new leather handbag. Target audience: women aged 25–40. The tone should be warm, friendly, and inspiring while conveying a luxury brand feel. Start with a catchy headline, then a short story about the handbag’s craftsmanship, and end with a call‑to‑action. Use three paragraphs of 2‑3 lines each.'</p><p>Prompt engineering is a skill – the more you practise, the better you become.</p>"
     }
   },
   {
     "id": 3,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "AI",
+    "date": "۱۴۰۴/۰۱/۱۷",
     "title": {
-      "fa": "پیشرفت‌های جدید در هوش مصنوعی و فناوری",
-      "en": "پیشرفت‌های جدید در هوش مصنوعی و فناوری"
+      "fa": "از کاربر تا متخصص؛ مسیر حرفه‌ای‌شدن با هوش مصنوعی",
+      "en": "From User to Expert: The Professional Path with AI"
     },
     "excerpt": {
-      "fa": "محتوای مقاله در این لحظه در دسترس نیست....",
-      "en": "محتوای مقاله در این لحظه در دسترس نیست...."
+      "fa": "در دو مقاله قبل با مفاهیم پایه و پرامپت‌نویسی آشنا شدید. اکنون زمان آن است که از یک کاربر معمولی به یک متخصص حرفه‌ای تبدیل شوید. این مقاله مسیر کسب درآمد، انتخاب ابزار و یادگیری را نشان می‌دهد...",
+      "en": "In the previous articles, you learned the basics and prompt engineering. Now it’s time to transform from a regular user into a professional expert. This article shows you the path to monetization, tool selection, and continuous learning..."
     },
     "body": {
-      "fa": "<p>محتوای مقاله در این لحظه در دسترس نیست.</p>",
-      "en": "<p>محتوای مقاله در این لحظه در دسترس نیست.</p>"
+      "fa": "<p>تا اینجا با مفاهیم پایه‌ی هوش مصنوعی و هنر پرامپت‌نویسی آشنا شدید. اما دانستن این مفاهیم به تنهایی کافی نیست. دنیای امروز به افرادی نیاز دارد که نه تنها با هوش مصنوعی «حرف بزنند»، بلکه بتوانند از آن برای خلق ارزش، حل مسائل پیچیده و حتی کسب درآمد استفاده کنند. در این مقاله، قدم در مسیر حرفه‌ای‌شدن با هوش مصنوعی می‌گذاریم و یاد می‌گیریم که چطور از یک کاربر معمولی به یک متخصص تبدیل شویم.</p><p>گام اول: انتخاب ابزار مناسب. دنیای ابزارهای هوش مصنوعی امروز آنقدر گسترده است که انتخاب درست، نیمی از راه است. هر ابزار برای کار خاصی طراحی شده است: ChatGPT برای تولید محتوای متنی و کدنویسی، Claude برای تحلیل اسناد طولانی، Gemini برای پردازش چندحالته، و Midjourney و DALL‑E برای تولید تصاویر حرفه‌ای.</p><p>گام دوم: تولید محتوای حرفه‌ای. یک متخصص از هوش مصنوعی برای طراحی استراتژی محتوا استفاده می‌کند، نه فقط برای نوشتن متن. او AI را در تمام مراحل به کار می‌گیرد: از ایده‌پردازی و پژوهش تا نوشتن، ویرایش و بهینه‌سازی سئو.</p><p>گام سوم: هوش مصنوعی در خدمت کسب‌وکار. خودکارسازی وظایف، تحلیل داده، بهبود تجربه‌ی مشتری – همه با AI ممکن شده است. ابزارهای AI می‌توانند ورود داده‌ها، پردازش صورت‌حساب و حتی مدیریت فروش را خودکار کنند.</p><p>گام چهارم: برنامه‌نویسی با هوش مصنوعی. تولید کد، دیباگ کردن، مستندسازی و یادگیری مفاهیم جدید برنامه‌نویسی با کمک AI، بهره‌وری را چند برابر می‌کند. پایتون به عنوان زبان رسمی دنیای AI شناخته می‌شود.</p><p>گام پنجم: مسیر یادگیری حرفه‌ای. نقشه‌ی راه پیشنهادی: مبانی برنامه‌نویسی (پایتون)، ریاضیات و آمار، یادگیری ماشین، یادگیری عمیق، پردازش زبان طبیعی و بینایی ماشین، و پروژه‌های عملی.</p><p>گام ششم: کسب درآمد. فریلنسری، توسعه‌ی ابزارهای AI، مشاوره‌ی کسب‌وکار، آموزش و تولید محتوای تصویری از جمله فرصت‌های درآمدزایی هستند.</p><p>هوش مصنوعی قرار نیست جای شما را بگیرد؛ اما کسی که از AI استفاده می‌کند، جای کسی را می‌گیرد که استفاده نمی‌کند. حالا نوبت شماست که دست به کار شوید.</p>",
+      "en": "<p>So far you’ve learned the basics of AI and the art of prompt engineering. But knowing these concepts alone is not enough. Today’s world needs people who can not only 'talk' to AI, but also use it to create value, solve complex problems, and even earn income. In this article, we step onto the path of becoming a professional and learn how to transform from a regular user into an expert.</p><p>Step one: choose the right tool. Today’s AI tool landscape is so vast that the right choice is half the battle. Each tool is designed for a specific job: ChatGPT for text generation and coding, Claude for long‑document analysis, Gemini for multimodal processing, and Midjourney/DALL‑E for professional image creation.</p><p>Step two: professional content creation. An expert uses AI to design a content strategy, not just to write text. They employ AI throughout the entire process: ideation, research, drafting, editing, and SEO optimization.</p><p>Step three: AI in business. Automating tasks, data analysis, and improving customer experience – all are possible with AI. AI tools can handle data entry, invoice processing, and even sales management.</p><p>Step four: coding with AI. Generating code, debugging, documentation, and learning new programming concepts with AI multiplies productivity. Python is recognized as the official language of the AI world.</p><p>Step five: professional learning path. Recommended roadmap: programming fundamentals (Python), mathematics & statistics, machine learning, deep learning, NLP & computer vision, and hands‑on projects.</p><p>Step six: monetization. Freelancing, developing AI tools, business consulting, teaching, and visual content production are some of the income opportunities.</p><p>AI won’t replace you; but someone who uses AI will replace someone who doesn’t. Now it’s your turn to take action.</p>"
     }
   },
   {
     "id": 4,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "Programming",
+    "date": "۱۴۰۴/۰۲/۰۱",
     "title": {
-      "fa": "پیشرفت‌های جدید در هوش مصنوعی و فناوری",
-      "en": "پیشرفت‌های جدید در هوش مصنوعی و فناوری"
+      "fa": "پایتون؛ زبانی برای همه، ابزاری برای هر کاری",
+      "en": "Python: A Language for Everyone, a Tool for Everything"
     },
     "excerpt": {
-      "fa": "محتوای فارسی در این لحظه در دسترس نیست....",
-      "en": "English content not available at this moment...."
+      "fa": "پایتون محبوب‌ترین زبان برنامه‌نویسی جهان است. در این مقاله با تاریخچه، ویژگی‌ها، کاربردها و بازار کار پایتون آشنا می‌شوید و می‌فهمید چرا باید آن را یاد بگیرید...",
+      "en": "Python is the world’s most popular programming language. In this article, you’ll learn about its history, features, applications, and job market – and why you should learn it..."
     },
     "body": {
-      "fa": "<p>محتوای فارسی در این لحظه در دسترس نیست.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>تصور کنید زبانی وجود داشته باشد که هم‌زمان برای یک دانش‌آموز تازه‌کار و یک مهندس نرم‌افزار باتجربه جذاب باشد. زبانی که بتوانید با آن یک بازی ساده بسازید، یک وب‌سایت حرفه‌ای طراحی کنید، داده‌های میلیونی را تحلیل کنید، و حتی به ماشین‌ها یاد دهید که فکر کنند! چنین زبانی وجود دارد و اسمش پایتون است.</p><p>پایتون یک زبان برنامه‌نویسی شیءگرا، متن‌باز، تفسیری، سطح‌بالا و همه‌منظوره است. سطح‌بالا یعنی جزئیات سخت‌افزاری را پنهان می‌کند؛ تفسیری یعنی خط‌به‌خط اجرا می‌شود؛ متن‌باز یعنی کد منبع آن در دسترس همه است.</p><p>پایتون در سال ۱۹۹۱ توسط خیدو فان روسوم ساخته شد و نام آن از برنامه‌ی تلویزیونی «مونتی پایتون» گرفته شده است. امروز به یکی از قدرتمندترین زبان‌های دنیا تبدیل شده است.</p><p>دلایل محبوبیت پایتون: سینتکس شفاف و خوانا، یادگیری آسان، همه‌کاره بودن، اکوسیستم غنی از کتابخانه‌ها (NumPy، Pandas، TensorFlow و ...)، پشتیبانی از چندالگوی برنامه‌نویسی، جامعه‌ی بزرگ و مقیاس‌پذیری.</p><p>کاربردهای اصلی: توسعه‌ی وب (Django، Flask)، علم داده (NumPy، Pandas، Matplotlib)، هوش مصنوعی (TensorFlow، PyTorch)، اسکریپت‌نویسی و خودکارسازی، توسعه‌ی بازی (Pygame)، شبکه و امنیت، و برنامه‌نویسی علمی.</p><p>بازار کار پایتون بسیار داغ است. مشاغلی مانند توسعه‌دهنده‌ی وب، تحلیل‌گر داده، دانشمند داده، مهندس یادگیری ماشین، و برنامه‌نویس هوش مصنوعی با حقوق‌های بالا در انتظار شما هستند. پایتون فقط یک زبان نیست؛ یک مهارت جهانی است.</p>",
+      "en": "<p>Imagine a language that appeals to both a novice student and an experienced software engineer. A language that lets you build a simple game, design a professional website, analyze millions of data points, and even teach machines to think! Such a language exists – it’s Python.</p><p>Python is an object‑oriented, open‑source, interpreted, high‑level, general‑purpose programming language. High‑level means hardware details are hidden; interpreted means it runs line‑by‑line; open‑source means its source code is publicly available.</p><p>Created in 1991 by Guido van Rossum, its name comes from the TV show 'Monty Python'. Today it has become one of the world’s most powerful languages.</p><p>Reasons for its popularity: clean and readable syntax, easy to learn, versatile, rich ecosystem of libraries (NumPy, Pandas, TensorFlow, etc.), support for multiple programming paradigms, huge community, and scalability.</p><p>Main applications: web development (Django, Flask), data science (NumPy, Pandas, Matplotlib), artificial intelligence (TensorFlow, PyTorch), scripting & automation, game development (Pygame), networking & security, and scientific computing.</p><p>The job market for Python is booming. Roles like web developer, data analyst, data scientist, machine learning engineer, and AI developer command high salaries. Python isn’t just a language; it’s a global skill.</p>"
     }
   },
   {
     "id": 5,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "Programming",
+    "date": "۱۴۰۴/۰۲/۰۲",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "پیش از شروع؛ سفری به قلبِ آماده‌سازی برای برنامه‌نویسی",
+      "en": "Before You Start: A Journey into Preparation for Programming"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "قبل از نوشتن اولین خط کد، باید محیط خود را آماده کنید. این مقاله شما را گام‌به‌گام برای نصب پایتون، انتخاب IDE، نوشتن اولین برنامه و آشنایی با ابزارهای ضروری راهنمایی می‌کند...",
+      "en": "Before writing your first line of code, you must set up your environment. This article walks you step‑by‑step through installing Python, choosing an IDE, writing your first program, and learning essential tools..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>در مقاله‌ی قبل با پایتون آشنا شدیم. حالا وقت آن رسیده که دست به کار شویم. برای شروع برنامه‌نویسی، پیش‌نیازهای ساده‌ای لازم است: یک کامپیوتر (ویندوز، مک یا لینوکس)، اتصال اینترنت، و از همه مهم‌تر، ذهنیت کنجکاو و صبور. همچنین آشنایی مقدماتی با انگلیسی کمک می‌کند.</p><p>نصب پایتون بسیار ساده است. به python.org بروید، آخرین نسخه را دانلود کنید. در ویندوز، حتماً گزینه «Add Python to PATH» را تیک بزنید. پس از نصب، با تایپ python --version در خط فرمان، از صحت نصب مطمئن شوید.</p><p>یک محیط برنامه‌نویسی (IDE) خوب انتخاب کنید. VS Code (رایگان و قدرتمند) با افزونه‌ی Python، یا PyCharm (نسخه Community رایگان)، یا Jupyter Notebook (برای تحلیل داده). حتی IDLE ساده هم برای شروع کافی است.</p><p>اولین برنامه: Hello, World! در VS Code یک فایل با پسوند py. بسازید و بنویسید: print(\"Hello, World!\") و اجرا کنید. تبریک! شما اولین برنامه‌ی خود را نوشتید.</p><p>نکات کلیدی برای شروع: خودتان کد را تایپ کنید، خطاها را دوست داشته باشید (آنها معلم شما هستند)، از یک منبع معتبر پیروی کنید، تمرین کنید، با دیگران یاد بگیرید، و پروژه‌های کوچک بسازید.</p><p>با خط فرمان آشنا شوید (cd، dir، ls). ابزار pip برای نصب کتابخانه‌ها (pip install نام_کتابخانه) را یاد بگیرید. از اشتباهات رایج مانند فراموشی کولون (:) یا فاصله‌گذاری (Indentation) نترسید.</p>",
+      "en": "<p>In the previous article, we got acquainted with Python. Now it’s time to get our hands dirty. Starting programming requires simple prerequisites: a computer (Windows, Mac, or Linux), internet, and most importantly, a curious and patient mindset. Basic English knowledge is helpful.</p><p>Installing Python is straightforward. Go to python.org, download the latest version. On Windows, make sure to check 'Add Python to PATH'. After installation, verify by typing python --version in the command line.</p><p>Choose a good IDE. VS Code (free and powerful) with the Python extension, PyCharm (Community Edition is free), or Jupyter Notebook (for data analysis). Even the simple IDLE is enough to start.</p><p>Your first program: Hello, World! In VS Code, create a file with .py extension and write: print(\"Hello, World!\") and run it. Congratulations! You’ve written your first program.</p><p>Key tips: type the code yourself, love errors (they’re your teachers), follow a reliable source, practise, learn with others, and build small projects.</p><p>Get to know the command line (cd, dir, ls). Learn pip for installing libraries (pip install library_name). Don’t fear common mistakes like missing colon (:) or indentation errors.</p>"
     }
   },
   {
     "id": 6,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "Programming",
+    "date": "۱۴۰۴/۰۲/۰۳",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "قدم‌هایِ اول؛ مبانیِ برنامه‌نویسی با پایتون",
+      "en": "First Steps: Python Programming Fundamentals"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "با متغیرها، انواع داده، عملگرها، شرط‌ها، حلقه‌ها و توابع در پایتون آشنا شوید. این مقاله پایه‌ای‌ترین مفاهیم برنامه‌نویسی را با مثال‌های ساده و کاربردی توضیح می‌دهد...",
+      "en": "Learn about variables, data types, operators, conditionals, loops, and functions in Python. This article explains the most fundamental programming concepts with simple, practical examples..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>در دو مقاله‌ی قبل، با پایتون و محیط آن آشنا شدیم. حالا وارد قلب برنامه‌نویسی می‌شویم: متغیرها، انواع داده، عملگرها، شرط‌ها، حلقه‌ها و توابع.</p><p><strong>متغیرها:</strong> محلی برای ذخیره‌ی داده‌ها. تعریف متغیر در پایتون بسیار ساده است: نام = \"علی\"، سن = 25. قوانین نام‌گذاری: با حرف یا زیرخط شروع شود، شامل حروف و اعداد باشد، از کلمات کلیدی استفاده نشود.</p><p><strong>انواع داده:</strong> اعداد صحیح (int)، اعشاری (float)، رشته‌ها (str)، بولین (bool)، لیست‌ها (list)، تاپل‌ها (tuple)، و دیکشنری‌ها (dict). برای تشخیص نوع از تابع type() استفاده کنید.</p><p><strong>عملگرها:</strong> ریاضی (+، -، *، /، //، %، **)، مقایسه‌ای (==، !=، >، <، >=، <=)، و منطقی (and، or، not).</p><p><strong>ورودی و خروجی:</strong> print() برای نمایش و input() برای دریافت ورودی از کاربر. f‑stringها خروجی‌های زیبا می‌سازند.</p><p><strong>ساختارهای شرطی:</strong> if، elif، else برای تصمیم‌گیری.</p><p><strong>حلقه‌ها:</strong> for برای پیمایش مجموعه‌ها (با range برای تکرار تعداد مشخص) و while برای اجرا تا زمانی که شرط برقرار است.</p><p><strong>توابع:</strong> با def تعریف می‌شوند، می‌توانند ورودی بگیرند (پارامتر) و خروجی بدهند (return). پارامترهای پیش‌فرض نیز پشتیبانی می‌شوند.</p><p>یک پروژه‌ی عملی: ماشین‌حساب ساده که دو عدد و عملگر را از کاربر می‌گیرد و نتیجه را محاسبه می‌کند. این مفاهیم، الفبای پایتون هستند.</p>",
+      "en": "<p>In the previous two articles, we got to know Python and its environment. Now we dive into the heart of programming: variables, data types, operators, conditionals, loops, and functions.</p><p><strong>Variables:</strong> storage locations for data. Defining a variable in Python is simple: name = \"Ali\", age = 25. Naming rules: start with a letter or underscore, contain letters and numbers, avoid keywords.</p><p><strong>Data types:</strong> integers (int), floats (float), strings (str), booleans (bool), lists (list), tuples (tuple), and dictionaries (dict). Use type() to check the type.</p><p><strong>Operators:</strong> arithmetic (+, -, *, /, //, %, **), comparison (==, !=, >, <, >=, <=), and logical (and, or, not).</p><p><strong>Input/Output:</strong> print() for display, input() for user input. f‑strings produce beautiful output.</p><p><strong>Conditionals:</strong> if, elif, else for decision making.</p><p><strong>Loops:</strong> for to iterate over collections (with range for a specific count), while to run as long as a condition is true.</p><p><strong>Functions:</strong> defined with def, can take input (parameters) and return output. Default parameters are supported.</p><p>A practical project: a simple calculator that takes two numbers and an operator from the user and computes the result. These concepts are the ABCs of Python.</p>"
     }
   },
   {
     "id": 7,
-    "category": "Technology",
-    "date": "2026/07/04",
+    "category": "Programming",
+    "date": "۱۴۰۴/۰۲/۰۴",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "گام دوم؛ شیءگرایی، مدیریت خطا و قدرت‌های پنهان",
+      "en": "Step Two: Object‑Orientation, Error Handling, and Hidden Powers"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "از مفاهیم پایه فراتر بروید: برنامه‌نویسی شیءگرا با کلاس‌ها و وراثت، مدیریت خطا با try/except، کار با فایل‌ها و ابزارهای پیشرفته‌ای مانند لیست‌فشرده و لامبدا را یاد بگیرید...",
+      "en": "Go beyond the basics: object‑oriented programming with classes and inheritance, error handling with try/except, file handling, and advanced tools like list comprehensions and lambdas..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>اگر بخواهیم برنامه‌های واقعی و بزرگ بنویسیم، دیگر نمی‌توانیم همه چیز را با توابع ساده مدیریت کنیم. اینجاست که برنامه‌نویسی شیءگرا (OOP) وارد می‌شود. کلاس‌ها مانند قالب عمل می‌کنند و اشیاء نمونه‌های واقعی آن قالب هستند.</p><p>یک کلاس ساده با class تعریف می‌شود. متد __init__ سازنده است و self به خود شیء اشاره می‌کند. ویژگی‌ها و متدها (توابع داخل کلاس) رفتار شیء را تعریف می‌کنند.</p><p><strong>وراثت:</strong> کلاس‌ها می‌توانند از یکدیگر ارث‌ببرند و ویژگی‌ها و متدها را بدون دوباره‌نویسی به ارث ببرند. با super() می‌توان سازنده‌ی کلاس پدر را فراخوانی کرد. متدها را می‌توان بازنویسی (Override) کرد.</p><p><strong>کپسوله‌سازی:</strong> با اضافه کردن دو زیرخط (__) در ابتدای نام متغیر، آن را خصوصی می‌کنیم و دسترسی مستقیم را محدود می‌کنیم.</p><p><strong>مدیریت خطا:</strong> با try/except می‌توانیم جلوی کرش برنامه را بگیریم. except برای انواع خاص خطا (ValueError، ZeroDivisionError) به کار می‌رود. finally همیشه اجرا می‌شود. با raise می‌توانیم خطای سفارشی پرتاب کنیم.</p><p><strong>کار با فایل‌ها:</strong> با open() و حالت‌های r، w، a فایل‌ها را باز می‌کنیم. with به طور خودکار فایل را می‌بندد. کتابخانه‌ی csv برای کار با داده‌های جدولی بسیار مفید است.</p><p><strong>ابزارهای پیشرفته:</strong> لیست‌فشرده (List Comprehension) کدنویسی را در یک خط انجام می‌دهد: [x**2 for x in range(10)]. توابع لامبدا (lambda) توابع بی‌نام کوچک هستند. map و filter روی لیست‌ها اعمال می‌شوند. دیکشنری‌فشرده نیز مشابه لیست‌فشرده است.</p><p>پروژه‌ی عملی: دفترچه تلفن که اطلاعات را در فایل JSON ذخیره و بازیابی می‌کند، با کلاس‌ها و مدیریت خطا.</p>",
+      "en": "<p>To build real, large programs, we can’t manage everything with simple functions. That’s where Object‑Oriented Programming (OOP) comes in. Classes are like blueprints, and objects are real instances of those blueprints.</p><p>A simple class is defined with class. The __init__ method is the constructor, and self refers to the instance. Attributes and methods define the object’s behaviour.</p><p><strong>Inheritance:</strong> classes can inherit from each other, reusing attributes and methods without rewriting. super() calls the parent constructor. Methods can be overridden.</p><p><strong>Encapsulation:</strong> adding double underscores (__) before a variable name makes it private, restricting direct access.</p><p><strong>Error Handling:</strong> try/except prevents crashes. except catches specific errors (ValueError, ZeroDivisionError). finally always runs. raise throws custom errors.</p><p><strong>File Handling:</strong> open() with modes r, w, a. with automatically closes the file. The csv library is great for tabular data.</p><p><strong>Advanced Tools:</strong> list comprehension condenses loops into one line: [x**2 for x in range(10)]. Lambda functions are small anonymous functions. map and filter apply functions to lists. Dictionary comprehensions work similarly.</p><p>Practical project: a phonebook that saves and retrieves data in a JSON file, using classes and error handling.</p>"
     }
   },
   {
     "id": 8,
-    "category": "Technology",
-    "date": "2026/07/05",
+    "category": "Programming",
+    "date": "۱۴۰۴/۰۲/۰۵",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "جادوی پیشرفته؛ دکوراتورها، مولدها و حرفه‌ای‌ترین ابزارها",
+      "en": "Advanced Magic: Decorators, Generators, and Professional Tools"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "با دکوراتورها قدرت توابع را افزایش دهید، با مولدها حافظه را مدیریت کنید، با APIها با دنیای خارج ارتباط برقرار کنید، و با محیط‌های مجازی و SQLite پروژه‌های حرفه‌ای بسازید...",
+      "en": "Enhance function power with decorators, manage memory with generators, communicate with the outside world via APIs, and build professional projects with virtual environments and SQLite..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>این مقاله، نقطه‌ی عطفی در مسیر یادگیری شماست. در اینجا ابزارهایی را می‌آموزید که شما را از یک برنامه‌نویس معمولی به یک مهندس نرم‌افزار حرفه‌ای تبدیل می‌کند.</p><p><strong>دکوراتورها:</strong> توابعی که توابع دیگر را می‌گیرند و با افزودن قابلیت، آنها را برمی‌گردانند. با @ بالای تابع استفاده می‌شوند. مثال: زمان‌سنجی اجرا با time.time()، یا ثبت گزارش. دکوراتورهای آماده مانند @staticmethod، @classmethod و @property در کلاس‌ها.</p><p><strong>مولدها (Generators):</strong> با کلمه‌ی کلیدی yield، یک تابع می‌تواند اجرا را مکث کند و بعداً ادامه دهد. این کار حافظه را به شدت بهینه می‌کند. برای خواندن فایل‌های بزرگ یا تولید دنباله‌های بی‌نهایت عالی هستند.</p><p><strong>کار با APIها:</strong> کتابخانه‌ی requests به شما امکان می‌دهد با سرویس‌های وب ارتباط برقرار کنید. داده‌ها را دریافت (GET)، ارسال (POST)، و پردازش کنید. همیشه پاسخ را بررسی کنید (raise_for_status).</p><p><strong>محیط‌های مجازی (venv):</strong> هر پروژه را در یک محیط ایزوله نگه دارید. با python -m venv myenv بسازید، فعال کنید (Scripts\activate یا source bin/activate)، کتابخانه‌ها را با pip نصب کنید، و با freeze نیازمندی‌ها را ذخیره کنید.</p><p><strong>پایگاه داده SQLite:</strong> به صورت توکار در پایتون وجود دارد. جداول بسازید، داده درج کنید، جستجو کنید و commit کنید. برای پروژه‌های کوچک و متوسط عالی است.</p><p>پروژه‌ی عملی: یک برنامه‌ی آب‌وهوا که از API داده می‌گیرد و در SQLite ذخیره می‌کند.</p>",
+      "en": "<p>This article is a turning point in your learning journey. Here you’ll acquire tools that transform you from an ordinary programmer into a professional software engineer.</p><p><strong>Decorators:</strong> functions that take other functions and return an enhanced version. Used with @ above a function. Example: timing execution with time.time(), or logging. Built‑in decorators like @staticmethod, @classmethod, and @property.</p><p><strong>Generators:</strong> using the yield keyword, a function can pause and resume later, drastically optimizing memory. Perfect for reading huge files or generating infinite sequences.</p><p><strong>Working with APIs:</strong> the requests library lets you communicate with web services. Retrieve (GET), send (POST), and process data. Always check the response (raise_for_status).</p><p><strong>Virtual Environments (venv):</strong> keep each project isolated. Create with python -m venv myenv, activate (Scripts\activate or source bin/activate), install libraries with pip, and freeze requirements.</p><p><strong>SQLite Database:</strong> built into Python. Create tables, insert data, query, and commit. Excellent for small to medium projects.</p><p>Practical project: a weather app that fetches data from an API and stores it in SQLite.</p>"
     }
   },
   {
     "id": 9,
-    "category": "Technology",
-    "date": "2026/07/05",
+    "category": "Programming",
+    "date": "۱۴۰۴/۰۲/۰۶",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "اوج حرفه‌ای‌گری؛ هم‌روندی، کتابخانه‌های علمی و مسیر بی‌نهایت",
+      "en": "Professional Peak: Concurrency, Scientific Libraries, and the Infinite Path"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "در آخرین مقاله‌ی پایتون، با چندنخی (Threading)، پردازش موازی، NumPy و Pandas آشنا شوید. سپس یک نقشه‌ی راه برای ادامه‌ی مسیر حرفه‌ای خود دریافت کنید...",
+      "en": "In the final Python article, learn about threading, multiprocessing, NumPy, and Pandas. Then get a roadmap for your continued professional journey..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>به آخرین مقاله‌ی مجموعه‌ی پایتون رسیده‌ایم. در اینجا مفاهیمی را یاد می‌گیریم که شما را به یک مهندس نرم‌افزار یا دانشمند داده تبدیل می‌کند.</p><p><strong>هم‌روندی (Concurrency):</strong> برای کارهای I/O‑محور (دانلود، درخواست وب)، از threading استفاده کنید تا چند کار هم‌زمان شروع شوند. به دلیل GIL، threading برای کارهای CPU‑سنگین مناسب نیست. برای آن کارها از multiprocessing با Pool استفاده کنید که از همه‌ی هسته‌های CPU بهره می‌برد.</p><p><strong>کتابخانه‌های علمی:</strong> NumPy آرایه‌های ndarray را فراهم می‌کند که عملیات ریاضی را بسیار سریع‌تر از لیست‌های معمولی انجام می‌دهند. Pandas با DataFrame، کار با داده‌های جدولی را مانند اکسل پیشرفته آسان می‌کند (فیلتر، گروه‌بندی، خواندن CSV).</p><p><strong>الگوهای طراحی:</strong> الگوهایی مانند Singleton (تضمین وجود فقط یک نمونه از کلاس) راه‌حل‌های اثبات‌شده‌ای برای مسائل تکراری هستند.</p><p><strong>وب‌اپ ساده با Flask:</strong> یک میکروفریم‌ورک که با چند خط کد یک سرور وب راه‌اندازی می‌کند و می‌توانید مسیرهای مختلف تعریف کنید.</p><p><strong>نقشه‌ی راه آینده:</strong> اگر به توسعه‌ی وب علاقه دارید، جنگو (Django) و REST API را یاد بگیرید. اگر علم داده و هوش مصنوعی را دنبال می‌کنید، بر Pandas و NumPy مسلط شوید، سپس scikit‑learn، TensorFlow و PyTorch را بیاموزید. قانون طلایی: ۸۰٪ وقت خود را صرف پروژه‌های عملی کنید. کتاب‌هایی مانند «Python Crash Course» و «Fluent Python» توصیه می‌شوند.</p><p>پایتون فقط یک وسیله است؛ هدف حل مسائل دنیای واقعی است. حالا بروید و دنیا را تغییر دهید.</p>",
+      "en": "<p>We’ve reached the final article of the Python series. Here we learn concepts that turn you into a software engineer or data scientist.</p><p><strong>Concurrency:</strong> for I/O‑bound tasks (downloads, web requests), use threading to start multiple tasks simultaneously. Due to the GIL, threading isn’t great for CPU‑heavy work; use multiprocessing with Pool to leverage all CPU cores.</p><p><strong>Scientific Libraries:</strong> NumPy provides ndarray objects that perform mathematical operations much faster than regular lists. Pandas, with DataFrames, makes working with tabular data as easy as advanced Excel (filtering, grouping, reading CSV).</p><p><strong>Design Patterns:</strong> patterns like Singleton (ensuring only one instance of a class) are proven solutions for recurring problems.</p><p><strong>Simple Web App with Flask:</strong> a micro‑framework that sets up a web server in a few lines, allowing you to define various routes.</p><p><strong>Future Roadmap:</strong> if you’re into web development, learn Django and REST APIs. If you’re pursuing data science and AI, master Pandas and NumPy, then learn scikit‑learn, TensorFlow, and PyTorch. The golden rule: spend 80% of your time on hands‑on projects. Books like 'Python Crash Course' and 'Fluent Python' are recommended.</p><p>Python is just a tool; the goal is solving real‑world problems. Now go and change the world.</p>"
     }
   },
   {
     "id": 10,
-    "category": "Technology",
-    "date": "2026/07/05",
+    "category": "Phone",
+    "date": "۱۴۰۴/۰۳/۱۰",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "آیفون ۱۸ پرو مکس؛ تاج‌گذاری یک امپراتور",
+      "en": "iPhone 18 Pro Max: Coronation of an Emperor"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "آیفون ۱۸ پرو مکس با تراشه‌ی ۲ نانومتری A20 Pro، دوربین دیافراگم متغیر و Dynamic Island کوچک‌تر، بزرگ‌ترین جهش تاریخ آیفون را رقم می‌زند...",
+      "en": "The iPhone 18 Pro Max with its 2nm A20 Pro chip, variable‑aperture camera, and smaller Dynamic Island marks the biggest leap in iPhone history..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>هر ساله در پاییز، دنیای تکنولوژی منتظر رونمایی اپل است. اما سال ۲۰۲۶ متفاوت است. آیفون ۱۸ پرو مکس با تراشه‌ی ۲ نانومتری A20 Pro، دوربین دیافراگم متغیر، و Dynamic Island کوچک‌تر (۳۵٪ کاهش) وارد میدان می‌شود. رونمایی در سپتامبر ۲۰۲۶ خواهد بود.</p><p>طراحی: سنگین‌ترین آیفون تاریخ با بدنه‌ی تیتانیومی و شیشه‌ی نیمه‌شفاف. رنگ‌های جدید: آبی روشن، خاکستری تیره، نقرهای و گیلاس تیره. ماژول دوربین بزرگ‌تر شده است.</p><p>نمایشگر: ۶٫۹ اینچ LTPO+ OLED، ۱۲۰Hz ProMotion. سنسورهای Face ID احتمالاً به زیر صفحه منتقل می‌شوند.</p><p>تراشه: A20 Pro (اولین تراشه‌ی ۲ نانومتری TSMC)، ۱۵٪ سریع‌تر و ۳۰٪ کم‌مصرف‌تر. رم ۱۲-۱۶ گیگابایت، حافظه از ۲۵۶ گیگابایت.</p><p>دوربین: سه‌گانه‌ی ۴۸ مگاپیکسلی با دیافراگم متغیر در دوربین اصلی (باز برای شب، بسته برای روز). دوربین سلفی ۲۴ مگاپیکسل.</p><p>باتری: ۵۱۰۰-۵۲۰۰ mAh، شارژ سیمی ۴۰W. عمر باتری با بهینه‌سازی تراشه بهبود یافته.</p><p>نرم‌افزار: iOS 27 با Siri ارتقاءیافته و هوش مصنوعی عمیق.</p><p>قیمت: حدود ۱۳۹۹ دلار (در ایران بیش از ۴۰۰ میلیون تومان).</p>",
+      "en": "<p>Every autumn, the tech world awaits Apple’s unveiling. But 2026 is different. The iPhone 18 Pro Max enters with a 2nm A20 Pro chip, variable‑aperture camera, and a Dynamic Island reduced by 35%. Launch is September 2026.</p><p>Design: the heaviest iPhone ever, titanium frame, frosted glass back. New colours: light blue, dark grey, silver, and dark cherry. The camera bump is larger.</p><p>Display: 6.9‑inch LTPO+ OLED, 120Hz ProMotion. Face ID sensors may move under the display.</p><p>Chip: A20 Pro (TSMC’s first 2nm), 15% faster, 30% more efficient. 12‑16GB RAM, storage from 256GB.</p><p>Camera: triple 48MP with variable aperture on the main sensor (wide for night, narrow for day). 24MP selfie camera.</p><p>Battery: 5100‑5200 mAh, 40W wired charging. Efficiency gains extend battery life.</p><p>Software: iOS 27 with upgraded Siri and deep AI integration.</p><p>Price: around $1399 (in Iran over 400 million Toman).</p>"
     }
   },
   {
     "id": 11,
-    "category": "Technology",
-    "date": "2026/07/06",
+    "category": "Phone",
+    "date": "۱۴۰۴/۰۳/۱۱",
     "title": {
-      "fa": "Latest breakthroughs in artificial intelligence and technology",
-      "en": "Latest breakthroughs in artificial intelligence and technology"
+      "fa": "گلکسی S26 اولترا؛ شمشیر دولبه‌ی سامسونگ",
+      "en": "Galaxy S26 Ultra: Samsung’s Double‑Edged Sword"
     },
     "excerpt": {
-      "fa": "English content not available at this moment....",
-      "en": "English content not available at this moment...."
+      "fa": "گلکسی S26 اولترا با نمایشگر Privacy Display، تراشه‌ی اسنپدراگون ۸ الیت نسل ۵ و دوربین ۲۰۰ مگاپیکسلی با دیافراگم f/1.4، یک پرچمدار تمام‌عیار است...",
+      "en": "The Galaxy S26 Ultra with Privacy Display, Snapdragon 8 Elite Gen 5, and a 200MP f/1.4 camera is a full‑fledged flagship..."
     },
     "body": {
-      "fa": "<p>English content not available at this moment.</p>",
-      "en": "<p>English content not available at this moment.</p>"
+      "fa": "<p>سامسونگ در فوریه ۲۰۲۶ از گلکسی S26 اولترا رونمایی کرد. تمرکز این نسل بر نرم‌افزار، هوش مصنوعی و قابلیت‌های خلاقانه است.</p><p>طراحی: باریک‌ترین اولترا (۷٫۹ میلی‌متر) با وزن ۲۱۴ گرم. رنگ‌ها: مشکی، بنفش کبالت، آبی آسمانی، سفید. Gorilla Glass Armor 2.</p><p>نمایشگر: ۶٫۹ اینچ Dynamic AMOLED 2X، ۱۲۰Hz. قابلیت انحصاری Privacy Display (محدودیت دید جانبی).</p><p>تراشه: اسنپدراگون ۸ الیت نسل ۵ (۳ نانومتر)، ۱۹٪ بهبود CPU، ۳۹٪ بهبود NPU.</p><p>دوربین: ۲۰۰ مگاپیکسل اصلی (f/1.4)، ۵۰ مگاپیکسل فوق‌عریض، ۵۰ مگاپیکسل تله‌فوتو (۵x زوم). Nightography پیشرفته.</p><p>باتری: ۵۰۰۰ mAh، شارژ ۶۰W (۷۵٪ در ۳۰ دقیقه).</p><p>نرم‌افزار: One UI 9 با Galaxy AI (Now Nudge، Creative Studio).</p><p>قیمت: از ۱۳۰۰ دلار (ایران: ۳۴۵-۴۶۰ میلیون تومان).</p>",
+      "en": "<p>Samsung unveiled the Galaxy S26 Ultra in February 2026. This generation focuses on software, AI, and creative features.</p><p>Design: thinnest Ultra (7.9mm) at 214g. Colours: black, cobalt violet, sky blue, white. Gorilla Glass Armor 2.</p><p>Display: 6.9‑inch Dynamic AMOLED 2X, 120Hz. Exclusive Privacy Display (limits side viewing angles).</p><p>Chip: Snapdragon 8 Elite Gen 5 (3nm), 19% CPU boost, 39% NPU boost.</p><p>Camera: 200MP main (f/1.4), 50MP ultrawide, 50MP telephoto (5x zoom). Enhanced Nightography.</p><p>Battery: 5000 mAh, 60W charging (75% in 30 min).</p><p>Software: One UI 9 with Galaxy AI (Now Nudge, Creative Studio).</p><p>Price: from $1300 (Iran: 345‑460 million Toman).</p>"
+    }
+  },
+  {
+    "id": 12,
+    "category": "Phone",
+    "date": "۱۴۰۴/۰۳/۱۲",
+    "title": {
+      "fa": "شیائومی ۱۶ اولترا؛ غول‌کشِ بی‌ادعا",
+      "en": "Xiaomi 16 Ultra: The Unassuming Giant Killer"
+    },
+    "excerpt": {
+      "fa": "شیائومی ۱۶ اولترا با باتری ۶۵۰۰-۷۵۰۰ میلی‌آمپرساعت، شارژ ۱۰۰ وات، دوربین ۲۰۰ مگاپیکسلی و قیمت رقابتی، ارزش خرید فوق‌العاده‌ای دارد...",
+      "en": "The Xiaomi 16 Ultra with a 6500‑7500mAh battery, 100W charging, 200MP camera, and competitive price offers incredible value..."
+    },
+    "body": {
+      "fa": "<p>شیائومی ۱۶ اولترا در نیمه‌ی اول ۲۰۲۶ رونمایی می‌شود. این گوشی با مشخصات رویایی و قیمت مناسب، رقبا را به چالش می‌کشد.</p><p>طراحی: شیک و مدرن با لوگوی لایکا. رنگ‌های مشکی و سفید. وزن ۲۳۵ گرم.</p><p>نمایشگر: ۶٫۸۵ اینچ LTPO AMOLED، ۲K، ۱۲۰Hz، روشنایی ۳۰۰۰ نیت.</p><p>تراشه: اولین گوشی با اسنپدراگون ۸ الیت ۲. رم ۱۶ گیگابایت، حافظه ۵۱۲ گیگابایت.</p><p>دوربین: ۲۰۰ مگاپیکسل اصلی با زوم اپتیکال پیوسته. سه دوربین پشتی ۵۰ مگاپیکسلی و سلفی ۵۰ مگاپیکسل. همکاری با لایکا.</p><p>باتری: ۶۵۰۰-۷۵۰۰ mAh، شارژ ۱۰۰W (سیمی) و ۵۰W (بی‌سیم).</p><p>نرم‌افزار: HyperOS 3.0 (اندروید ۱۶).</p><p>قیمت: ۹۰۰-۱۰۰۰ دلار (ایران: ۲۵۰-۳۵۰ میلیون تومان).</p>",
+      "en": "<p>The Xiaomi 16 Ultra will be unveiled in the first half of 2026. With dream specs and an attractive price, it challenges competitors.</p><p>Design: chic and modern with Leica logo. Black and white colours. 235g.</p><p>Display: 6.85‑inch LTPO AMOLED, 2K, 120Hz, 3000 nits brightness.</p><p>Chip: first phone with Snapdragon 8 Elite 2. 16GB RAM, 512GB storage.</p><p>Camera: 200MP main with continuous optical zoom. Three 50MP rear cameras, 50MP selfie. Leica partnership.</p><p>Battery: 6500‑7500 mAh, 100W wired, 50W wireless charging.</p><p>Software: HyperOS 3.0 (Android 16).</p><p>Price: $900‑1000 (Iran: 250‑350 million Toman).</p>"
+    }
+  },
+  {
+    "id": 13,
+    "category": "Phone",
+    "date": "۱۴۰۴/۰۳/۱۳",
+    "title": {
+      "fa": "نبردِ سه‌گانه؛ کدام پرچمدارِ ۲۰۲۶ را بخریم؟",
+      "en": "Triple Battle: Which 2026 Flagship Should You Buy?"
+    },
+    "excerpt": {
+      "fa": "آیفون ۱۸ پرو مکس، گلکسی S26 اولترا و شیائومی ۱۶ اولترا را از هر نظر مقایسه می‌کنیم: تراشه، دوربین، باتری، نمایشگر و قیمت. کدام یک برای شما مناسب‌تر است؟...",
+      "en": "We compare the iPhone 18 Pro Max, Galaxy S26 Ultra, and Xiaomi 16 Ultra in every aspect: chip, camera, battery, display, and price. Which one suits you best?..."
+    },
+    "body": {
+      "fa": "<p>سه پرچمدار قدرتمند ۲۰۲۶ را مقایسه می‌کنیم. در یک نگاه: آیفون با تراشه ۲ نانومتری، سامسونگ با دوربین ۲۰۰ مگاپیکسلی، شیائومی با باتری عظیم.</p><h3>جدول مقایسه</h3><table border='1' cellpadding='5' cellspacing='0'><tr><th>ویژگی</th><th>آیفون ۱۸ پرو مکس</th><th>گلکسی S26 اولترا</th><th>شیائومی ۱۶ اولترا</th></tr><tr><td>تراشه</td><td>A20 Pro (2nm)</td><td>Snapdragon 8 Elite Gen 5 (3nm)</td><td>Snapdragon 8 Elite 2</td></tr><tr><td>دوربین اصلی</td><td>48MP (متغیر)</td><td>200MP (f/1.4)</td><td>200MP (زوم پیوسته)</td></tr><tr><td>باتری</td><td>5100-5200mAh</td><td>5000mAh</td><td>6500-7500mAh</td></tr><tr><td>قیمت (دلار)</td><td>~1399</td><td>1300</td><td>900-1000</td></tr></table><p>نتیجه‌گیری:</p><ul><li><strong>بهترین عملکرد و اکوسیستم:</strong> آیفون ۱۸ پرو مکس</li><li><strong>بهترین دوربین و نوآوری:</strong> گلکسی S26 اولترا</li><li><strong>بهترین ارزش خرید و باتری:</strong> شیائومی ۱۶ اولترا</li></ul>",
+      "en": "<p>We compare the three powerful 2026 flagships. At a glance: iPhone with 2nm chip, Samsung with 200MP camera, Xiaomi with huge battery.</p><h3>Comparison Table</h3><table border='1' cellpadding='5' cellspacing='0'><tr><th>Feature</th><th>iPhone 18 Pro Max</th><th>Galaxy S26 Ultra</th><th>Xiaomi 16 Ultra</th></tr><tr><td>Chip</td><td>A20 Pro (2nm)</td><td>Snapdragon 8 Elite Gen 5 (3nm)</td><td>Snapdragon 8 Elite 2</td></tr><tr><td>Main Camera</td><td>48MP (variable)</td><td>200MP (f/1.4)</td><td>200MP (continuous zoom)</td></tr><tr><td>Battery</td><td>5100-5200mAh</td><td>5000mAh</td><td>6500-7500mAh</td></tr><tr><td>Price (USD)</td><td>~1399</td><td>1300</td><td>900-1000</td></tr></table><p>Conclusion:</p><ul><li><strong>Best performance & ecosystem:</strong> iPhone 18 Pro Max</li><li><strong>Best camera & innovation:</strong> Galaxy S26 Ultra</li><li><strong>Best value & battery:</strong> Xiaomi 16 Ultra</li></ul>"
+    }
+  },
+  {
+    "id": 14,
+    "category": "Laptop",
+    "date": "۱۴۰۴/۰۴/۰۱",
+    "title": {
+      "fa": "مک‌بوک پرو ۲۰۲۶؛ وقتی اپل از M5 تا M7 را یکجا رو می‌کند",
+      "en": "MacBook Pro 2026: When Apple Unveils M5 to M7 All at Once"
+    },
+    "excerpt": {
+      "fa": "اپل در سال ۲۰۲۶ سه نسل تراشه را روانه‌ی بازار می‌کند. با M5 Pro/Max، M6 (۲ نانومتر) و M7 آشنا شوید...",
+      "en": "Apple will release three generations of chips in 2026. Meet the M5 Pro/Max, M6 (2nm), and M7..."
+    },
+    "body": {
+      "fa": "<p>مارس ۲۰۲۶: مک‌بوک پرو با M5 Pro و M5 Max (تا ۱۸ هسته CPU، ۱۲۸GB رم، ۸TB SSD، Wi‑Fi 7). نمایشگر Liquid Retina XDR با نانو‌بافت، ۲۴ ساعت باتری. قیمت از ۲۴۹۹ دلار.</p><p>نیمه‌ی دوم ۲۰۲۶: M6 (اولین تراشه‌ی ۲ نانومتری مک) روی مدل‌های ۱۴ اینچی入门. کنسل شدن M6 Pro/Max.</p><p>نیمه‌ی اول ۲۰۲۷: M7 Pro/Max با طراحی کاملاً جدید.</p>",
+      "en": "<p>March 2026: MacBook Pro with M5 Pro and M5 Max (up to 18‑core CPU, 128GB RAM, 8TB SSD, Wi‑Fi 7). Liquid Retina XDR with nano‑texture, 24‑hour battery. Starting at $2499.</p><p>H2 2026: M6 (first 2nm Mac chip) on entry‑level 14‑inch models. M6 Pro/Max cancelled.</p><p>H1 2027: M7 Pro/Max with a completely new design.</p>"
+    }
+  },
+  {
+    "id": 15,
+    "category": "Laptop",
+    "date": "۱۴۰۴/۰۴/۰۲",
+    "title": {
+      "fa": "MSI Titan 18 HX؛ اژدهایی که آتش می‌بارد",
+      "en": "MSI Titan 18 HX: A Dragon That Breathes Fire"
+    },
+    "excerpt": {
+      "fa": "MSI Titan 18 HX Dragon Edition با RTX 5090 و طراحی خاص ۴۰ سالگی، و Raider 16 Max با ۳۰۰ وات قدرت را بررسی کنید...",
+      "en": "Check out the MSI Titan 18 HX Dragon Edition with RTX 5090 and 40th‑anniversary design, plus the 300W Raider 16 Max..."
+    },
+    "body": {
+      "fa": "<p>Titan 18 HX Dragon Edition (ژوئن ۲۰۲۶): نسخه‌ی محدود با حکاکی فلزی، Intel Core Ultra 9 290HX Plus، RTX 5090، نمایشگر ۱۸ اینچ 4K 240Hz Mini LED. قیمت ۵۰۰۰-۶۰۰۰ دلار.</p><p>Raider 16 Max (آوریل ۲۰۲۶): قدرتمندترین ۱۶ اینچی با ۳۰۰W توان، خنک‌کننده‌ی سه‌فن، نمایشگر OLED 240Hz. قیمت ۳۵۰۰-۴۵۰۰ دلار.</p>",
+      "en": "<p>Titan 18 HX Dragon Edition (June 2026): limited edition with metal engraving, Intel Core Ultra 9 290HX Plus, RTX 5090, 18‑inch 4K 240Hz Mini LED. Price $5000‑6000.</p><p>Raider 16 Max (April 2026): most powerful 16‑inch with 300W power, triple‑fan cooling, 240Hz OLED. Price $3500‑4500.</p>"
+    }
+  },
+  {
+    "id": 16,
+    "category": "Laptop",
+    "date": "۱۴۰۴/۰۴/۰۳",
+    "title": {
+      "fa": "ROG Strix SCAR 18؛ شکارچیِ بی‌چون و چرا",
+      "en": "ROG Strix SCAR 18: The Ultimate Predator"
+    },
+    "excerpt": {
+      "fa": "ایسوس با ROG Strix SCAR 18 (۳۲۰ وات، RTX 5090) و Zephyrus Duo (دو نمایشگر OLED) رکوردشکنی کرده است...",
+      "en": "ASUS breaks records with the ROG Strix SCAR 18 (320W, RTX 5090) and Zephyrus Duo (dual OLED displays)..."
+    },
+    "body": {
+      "fa": "<p>ROG Strix SCAR 18 (مه ۲۰۲۶): ۳۲۰W توان ترکیبی، Intel Core Ultra 9 290HX Plus، RTX 5090، ۱۲۸GB DDR5، ۸TB PCIe Gen5، نمایشگر ۱۸ اینچ 4K 240Hz Mini LED با ۱۶۰۰ نیت روشنایی. سیستم خنک‌کننده Glacier Cooling 4.0. قیمت ۴۰۰۰-۵۰۰۰ دلار.</p><p>ROG Zephyrus Duo (ژوئن ۲۰۲۶): دو نمایشگر ۳K OLED، صفحه‌کلید جداشدنی، RTX 5090. قیمت ۴۵۰۰-۵۵۰۰ دلار.</p>",
+      "en": "<p>ROG Strix SCAR 18 (May 2026): 320W combined power, Intel Core Ultra 9 290HX Plus, RTX 5090, 128GB DDR5, 8TB PCIe Gen5, 18‑inch 4K 240Hz Mini LED with 1600 nits. Glacier Cooling 4.0. Price $4000‑5000.</p><p>ROG Zephyrus Duo (June 2026): dual 3K OLED displays, detachable keyboard, RTX 5090. Price $4500‑5500.</p>"
+    }
+  },
+  {
+    "id": 17,
+    "category": "Laptop",
+    "date": "۱۴۰۴/۰۴/۰۴",
+    "title": {
+      "fa": "نبردِ سه‌گانه؛ کدام لپ‌تاپِ پرچمدارِ ۲۰۲۶ را بخریم؟",
+      "en": "Triple Battle: Which 2026 Flagship Laptop Should You Buy?"
+    },
+    "excerpt": {
+      "fa": "مک‌بوک پرو M5 Max، MSI Titan 18 HX و ROG Strix SCAR 18 را مقایسه می‌کنیم. از عملکرد و نمایشگر تا باتری و قیمت...",
+      "en": "We compare the MacBook Pro M5 Max, MSI Titan 18 HX, and ROG Strix SCAR 18. From performance and display to battery and price..."
+    },
+    "body": {
+      "fa": "<h3>جدول مقایسه</h3><table border='1' cellpadding='5' cellspacing='0'><tr><th>ویژگی</th><th>مک‌بوک پرو M5 Max</th><th>MSI Titan 18 HX</th><th>ROG Strix SCAR 18</th></tr><tr><td>پردازنده</td><td>Apple M5 Max</td><td>Intel Core Ultra 9</td><td>Intel Core Ultra 9</td></tr><tr><td>کارت گرافیک</td><td>یکپارچه ۴۰ هسته‌ای</td><td>RTX 5090</td><td>RTX 5090</td></tr><tr><td>باتری</td><td>تا ۲۴ ساعت</td><td>۳-۴ ساعت</td><td>۳-۴ ساعت</td></tr><tr><td>وزن</td><td>~۲٫۱ kg</td><td>~۳٫۳ kg</td><td>~۳٫۳ kg</td></tr><tr><td>قیمت</td><td>~۳۵۰۰ دلار</td><td>۵۰۰۰-۶۰۰۰ دلار</td><td>۴۰۰۰-۵۰۰۰ دلار</td></tr></table><p>نتیجه‌گیری:</p><ul><li><strong>برای حرفه‌ای‌های خلاق و کاربران اکوسیستم اپل:</strong> مک‌بوک پرو M5 Max</li><li><strong>برای گیمرها و قدرت مطلق:</strong> ROG Strix SCAR 18</li><li><strong>برای کلکسیونرها و طراحی خاص:</strong> MSI Titan 18 HX</li></ul>",
+      "en": "<h3>Comparison Table</h3><table border='1' cellpadding='5' cellspacing='0'><tr><th>Feature</th><th>MacBook Pro M5 Max</th><th>MSI Titan 18 HX</th><th>ROG Strix SCAR 18</th></tr><tr><td>Processor</td><td>Apple M5 Max</td><td>Intel Core Ultra 9</td><td>Intel Core Ultra 9</td></tr><tr><td>Graphics</td><td>Integrated 40‑core</td><td>RTX 5090</td><td>RTX 5090</td></tr><tr><td>Battery</td><td>Up to 24h</td><td>3‑4h</td><td>3‑4h</td></tr><tr><td>Weight</td><td>~2.1 kg</td><td>~3.3 kg</td><td>~3.3 kg</td></tr><tr><td>Price</td><td>~$3500</td><td>$5000‑6000</td><td>$4000‑5000</td></tr></table><p>Conclusion:</p><ul><li><strong>For creative pros and Apple ecosystem users:</strong> MacBook Pro M5 Max</li><li><strong>For gamers and ultimate power:</strong> ROG Strix SCAR 18</li><li><strong>For collectors and unique design:</strong> MSI Titan 18 HX</li></ul>"
+    }
+  },
+  {
+    "id": 18,
+    "category": "BuyingGuide",
+    "date": "۱۴۰۴/۰۵/۰۱",
+    "title": {
+      "fa": "راهنمای جامع خرید موبایل ۲۰۲۶ | هر بودجه، بهترین انتخاب",
+      "en": "Complete Mobile Buying Guide 2026 | Best Choice for Every Budget"
+    },
+    "excerpt": {
+      "fa": "از گوشی‌های اقتصادی تا پرچمداران بالای ۳۰۰ میلیون تومان. بهترین انتخاب در هر بازه قیمتی سال ۲۰۲۶ را اینجا پیدا کنید...",
+      "en": "From budget phones to flagships over $2000. Find the best pick for every price range in 2026..."
+    },
+    "body": {
+      "fa": "<p>سال ۲۰۲۶ تنوع گوشی‌ها بسیار بالاست. در این راهنما، بهترین‌ها را بر اساس بودجه دسته‌بندی کرده‌ایم.</p><h3>زیر ۲۰ میلیون</h3><ul><li><strong>سامسونگ A27 5G:</strong> ۱۲۰Hz، اسنپدراگون، IP64. قیمت ۱۲-۱۳.۵ میلیون.</li><li><strong>ردمی نوت ۱۵ پرو پلاس:</strong> ۱۰۸MP، ۵۵۰۰mAh. قیمت ۱۳-۱۵ میلیون.</li></ul><h3>۲۰ تا ۵۰ میلیون</h3><ul><li><strong>سامسونگ A56 5G:</strong> IP67، ۶ سال به‌روزرسانی، ۵۰MP OIS. قیمت ۲۵-۳۰ میلیون.</li><li><strong>vivo V60 Lite:</strong> ۶۵۰۰mAh، ۹۰W شارژ. قیمت ۲۲-۲۸ میلیون.</li></ul><h3>۵۰ تا ۱۵۰ میلیون</h3><ul><li><strong>پوکو F8 Pro:</strong> اسنپدراگون ۸ الیت، ۶۲۱۰mAh. قیمت ۵۰-۶۰ میلیون.</li><li><strong>آیفون ۱۷:</strong> اولین ۱۲۰Hz استاندارد، A19. قیمت ۱۰۰-۱۲۰ میلیون.</li></ul><h3>۱۵۰ تا ۳۰۰ میلیون</h3><ul><li><strong>گلکسی S26 Ultra:</strong> Privacy Display، ۲۰۰MP. قیمت ۲۵۰-۳۰۰ میلیون.</li><li><strong>vivo X300 Ultra:</strong> دو دوربین ۲۰۰MP، ۶۶۰۰mAh. قیمت ~۲۰۰ میلیون.</li></ul><h3>بالای ۳۰۰ میلیون</h3><ul><li><strong>آیفون ۱۸ پرو مکس (پاییز):</strong> ۲nm، دیافراگم متغیر.</li></ul>",
+      "en": "<p>2026 offers incredible phone variety. We’ve categorised the best picks by budget.</p><h3>Under 20M Toman</h3><ul><li><strong>Samsung A27 5G:</strong> 120Hz, Snapdragon, IP64. Price 12‑13.5M.</li><li><strong>Redmi Note 15 Pro Plus:</strong> 108MP, 5500mAh. Price 13‑15M.</li></ul><h3>20‑50M Toman</h3><ul><li><strong>Samsung A56 5G:</strong> IP67, 6y updates, 50MP OIS. Price 25‑30M.</li><li><strong>vivo V60 Lite:</strong> 6500mAh, 90W charging. Price 22‑28M.</li></ul><h3>50‑150M Toman</h3><ul><li><strong>Poco F8 Pro:</strong> Snapdragon 8 Elite, 6210mAh. Price 50‑60M.</li><li><strong>iPhone 17:</strong> first standard 120Hz, A19. Price 100‑120M.</li></ul><h3>150‑300M Toman</h3><ul><li><strong>Galaxy S26 Ultra:</strong> Privacy Display, 200MP. Price 250‑300M.</li><li><strong>vivo X300 Ultra:</strong> dual 200MP, 6600mAh. Price ~200M.</li></ul><h3>Above 300M Toman</h3><ul><li><strong>iPhone 18 Pro Max (Autumn):</strong> 2nm, variable aperture.</li></ul>"
     }
   }
-]
+      ]
