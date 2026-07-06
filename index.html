@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تک پلاس | Tech+ | رسانه فناوری خودکار</title>
+    <title>تک پلاس | Tech+ | رسانه فناوری</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;600;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <style>
@@ -24,9 +24,9 @@
             --text: #2D3748;
             --card-bg: rgba(255,255,255,0.75);
             --header-bg: rgba(255,255,255,0.55);
-            --footer-bg: rgba(45,55,72,0.9);
+            --footer-bg: rgba(30,35,45,0.95);
             --footer-text: rgba(255,255,255,0.9);
-            --glass-bg: rgba(255,255,255,0.25);
+            --glass-bg: rgba(255,255,255,0.2);
             --glass-border: rgba(255,255,255,0.4);
             --font-main: 'Estedad', 'Segoe UI', Tahoma, sans-serif;
             --font-logo: 'Orbitron', sans-serif;
@@ -35,9 +35,9 @@
         .dark-mode {
             --bg: #1A202C;
             --text: #E2E8F0;
-            --card-bg: rgba(45,55,72,0.8);
-            --header-bg: rgba(26,32,44,0.6);
-            --footer-bg: rgba(17,24,39,0.9);
+            --card-bg: rgba(45,55,72,0.85);
+            --header-bg: rgba(26,32,44,0.65);
+            --footer-bg: rgba(15,20,28,0.95);
             --light-bg: #1A202C;
             --shadow: 0 10px 30px rgba(0,0,0,0.4);
             --shadow-hover: 0 20px 40px rgba(108,99,255,0.3);
@@ -55,43 +55,27 @@
             transition: background 0.3s, color 0.3s;
         }
         #particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; }
-        .bg-circles { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-2; pointer-events:none; overflow:hidden; }
-        .bg-circles::before, .bg-circles::after {
-            content:''; position:absolute; border-radius:50%;
-            background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-            opacity:0.15; filter:blur(80px); animation: floatCircle 15s infinite alternate;
-        }
-        .bg-circles::before { width:600px; height:600px; top:-200px; right:-200px; }
-        .bg-circles::after { width:500px; height:500px; bottom:-150px; left:-150px; animation-delay: -7s; }
-        @keyframes floatCircle { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(50px, -80px) scale(1.2); } }
         .container { max-width:1300px; margin:0 auto; padding:0 2rem; }
         header {
-            background: var(--header-bg); backdrop-filter: blur(var(--blur-amount));
+            background: var(--header-bg);
+            backdrop-filter: blur(var(--blur-amount));
             -webkit-backdrop-filter: blur(var(--blur-amount));
             padding:1rem 0; position:fixed; width:100%; top:0; z-index:1000;
-            box-shadow:0 2px 20px rgba(0,0,0,0.05); border-bottom:1px solid var(--glass-border);
+            box-shadow:0 2px 20px rgba(0,0,0,0.05);
+            border-bottom:1px solid var(--glass-border);
         }
         .header-inner { display:flex; justify-content:space-between; align-items:center; }
         .logo { display:flex; align-items:center; text-decoration:none; gap:0.5rem; }
         .logo-icon {
-            width:50px; height:50px; border-radius:18px;
+            width:50px; height:50px; border-radius:16px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             display:flex; align-items:center; justify-content:center;
             font-family: var(--font-logo); font-size:2rem; font-weight:900; color:white;
             box-shadow: 0 8px 25px rgba(108,99,255,0.4);
             position:relative; overflow:hidden; transform:rotate(-5deg);
-            animation: logoGlow 2s infinite alternate;
+            transition: transform 0.3s;
         }
-        @keyframes logoGlow {
-            0% { box-shadow: 0 8px 25px rgba(108,99,255,0.4); }
-            100% { box-shadow: 0 8px 35px rgba(108,99,255,0.7); }
-        }
-        .logo-icon::after {
-            content:''; position:absolute; top:-20px; left:-20px; width:40px; height:40px;
-            background:rgba(255,255,255,0.3); border-radius:50%; filter:blur(10px);
-            animation: logoShine 3s infinite;
-        }
-        @keyframes logoShine { 0% { transform:translate(0,0); opacity:0.5; } 50% { transform:translate(30px,20px); opacity:0.2; } 100% { transform:translate(0,0); opacity:0.5; } }
+        .logo-icon:hover { transform:rotate(0deg) scale(1.05); }
         .logo-text {
             font-family: var(--font-logo); font-size:2.2rem; font-weight:900;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -108,6 +92,12 @@
         }
         .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
         .user-menu { display:flex; align-items:center; gap:1rem; }
+        .dark-toggle, .lang-toggle {
+            background: var(--glass-bg); backdrop-filter:blur(10px);
+            border:1px solid var(--glass-border); padding:0.4rem 0.8rem;
+            border-radius:50px; cursor:pointer; font-size:1rem;
+            transition: var(--transition); color: var(--text);
+        }
         .user-avatar {
             width:35px; height:35px; border-radius:50%;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -233,7 +223,7 @@
             border-radius:50%; background:linear-gradient(135deg, var(--primary), var(--secondary));
             box-shadow:0 10px 30px rgba(108,99,255,0.5); display:none;
             align-items:center; justify-content:center; cursor:pointer;
-            z-index:999; animation:pulse 2s infinite; font-size:1.5rem; color:white;
+            z-index:999; animation:pulse 2s infinite; font-size:1.8rem; color:white;
         }
         .ai-bubble.show { display:flex; }
         @keyframes pulse { 0% { box-shadow:0 0 0 0 rgba(108,99,255,0.5); } 70% { box-shadow:0 0 0 20px rgba(108,99,255,0); } 100% { box-shadow:0 0 0 0 rgba(108,99,255,0); } }
@@ -281,16 +271,15 @@
 <body>
 
 <div id="particles-js"></div>
-<div class="bg-circles"></div>
 <div class="reading-progress" id="readingProgress"></div>
 
-<!-- Mobile Menu (no emojis, clean text) -->
+<!-- منوی موبایل (بدون ایموجی) -->
 <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <div class="mobile-menu">
-        <a href="#" onclick="navigate('home'); closeMobileMenu()" data-translate="home">خانه</a>
-        <a href="#" onclick="navigate('articles'); closeMobileMenu()" data-translate="articles">مقالات</a>
-        <a href="#" onclick="navigate('compare'); closeMobileMenu()" data-translate="compare">مقایسه</a>
-        <a href="#" onclick="navigate('about'); closeMobileMenu()" data-translate="about">درباره ما</a>
+        <a href="#" onclick="navigate('home'); closeMobileMenu()">خانه</a>
+        <a href="#" onclick="navigate('articles'); closeMobileMenu()">مقالات</a>
+        <a href="#" onclick="navigate('compare'); closeMobileMenu()">مقایسه</a>
+        <a href="#" onclick="navigate('about'); closeMobileMenu()">درباره سایت</a>
     </div>
 </div>
 
@@ -302,13 +291,14 @@
         </a>
         <nav>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="navigate('home')" data-translate="home">خانه</a></li>
-                <li><a href="#articles" onclick="navigate('articles')" data-translate="articles">مقالات</a></li>
-                <li><a href="#compare" onclick="navigate('compare')" data-translate="compare">مقایسه</a></li>
-                <li><a href="#about" onclick="navigate('about')" data-translate="about">درباره ما</a></li>
+                <li><a href="#home" onclick="navigate('home')">خانه</a></li>
+                <li><a href="#articles" onclick="navigate('articles')">مقالات</a></li>
+                <li><a href="#compare" onclick="navigate('compare')">مقایسه</a></li>
+                <li><a href="#about" onclick="navigate('about')">درباره سایت</a></li>
             </ul>
         </nav>
         <div class="user-menu">
+            <button class="dark-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
             <div id="userArea"></div>
             <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -317,24 +307,24 @@
     </div>
 </header>
 
-<!-- Pages -->
+<!-- صفحات -->
 <div id="home" class="page active">
     <div class="container">
         <div class="hero-slider" id="heroSlider">
-            <div class="slide active"><div><h1 style="font-size:2.8rem; font-weight:900;" data-translate="hero1">آینده را با تک پلاس کاوش کنید</h1><p data-translate="hero2">رسانه فناوری کاملاً خودکار توسط هوش مصنوعی</p><a href="#" class="btn btn-primary" style="background:white; color:var(--primary);" onclick="navigate('articles')" data-translate="viewArticles">مشاهده مقالات</a></div></div>
-            <div class="slide"><div><h1 data-translate="hero3">تحلیل‌های عمیق و به‌روز</h1><p data-translate="hero4">جدیدترین اخبار فناوری، آموزش برنامه‌نویسی و بررسی تخصصی</p></div></div>
+            <div class="slide active"><div><h1 style="font-size:2.8rem; font-weight:900;">آینده را با تک پلاس کاوش کنید</h1><p>رسانه فناوری خودکار، ساخته‌شده با هوش مصنوعی</p><a href="#" class="btn btn-primary" style="background:white; color:var(--primary);" onclick="navigate('articles')">مشاهده مقالات</a></div></div>
+            <div class="slide"><div><h1>تحلیل‌های عمیق و به‌روز</h1><p>جدیدترین اخبار فناوری، آموزش برنامه‌نویسی و بررسی تخصصی</p></div></div>
         </div>
-        <section><h2 style="text-align:center; font-size:2rem; background:linear-gradient(135deg,var(--primary),var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;" data-translate="latestArticles">جدیدترین مقالات</h2><div id="latestGrid" class="articles-grid"></div></section>
+        <section><h2 style="text-align:center; font-size:2rem; background:linear-gradient(135deg,var(--primary),var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">جدیدترین مقالات</h2><div id="latestGrid" class="articles-grid"></div></section>
     </div>
 </div>
 
 <div id="articles" class="page">
     <div class="container">
-        <h2 data-translate="articles">مقالات</h2>
+        <h2>مقالات</h2>
         <div style="display:flex; gap:1rem; flex-wrap:wrap; margin:1rem 0;">
             <input type="text" id="searchInput" placeholder="جستجو..." oninput="filterArticles()" style="flex:1; padding:14px; border-radius:50px; border:1px solid var(--glass-border); background:var(--card-bg);">
             <select id="categoryFilter" onchange="filterArticles()" style="padding:14px; border-radius:50px; background:var(--card-bg); border:1px solid var(--glass-border);">
-                <option value="all" data-translate="all">همه</option>
+                <option value="all">همه</option>
                 <option value="AI">هوش مصنوعی</option>
                 <option value="Quantum">فیزیک کوانتوم</option>
                 <option value="Phone">موبایل</option>
@@ -345,7 +335,7 @@
                 <option value="Science">علوم</option>
             </select>
         </div>
-        <div id="articlesContainer" class="articles-grid"><p data-translate="noArticle">هنوز مقاله‌ای منتشر نشده است.</p></div>
+        <div id="articlesContainer" class="articles-grid"><p>هنوز مقاله‌ای منتشر نشده است.</p></div>
         <div id="pagination" class="pagination"></div>
     </div>
 </div>
@@ -356,7 +346,7 @@
 
 <div id="compare" class="page">
     <div class="container">
-        <h2 data-translate="compare">مقایسه محصولات</h2>
+        <h2>مقایسه محصولات</h2>
         <div class="product-selector" id="productSelector"></div>
         <div id="comparisonTable" class="glass" style="padding:2rem; border-radius:var(--radius); margin-top:2rem;"></div>
     </div>
@@ -364,18 +354,19 @@
 
 <div id="about" class="page">
     <div class="container" style="max-width:800px; margin:0 auto;">
-        <h2 style="font-size:2.2rem; margin-bottom:2rem;" data-translate="about">درباره تک پلاس</h2>
+        <h2 style="font-size:2.2rem; margin-bottom:2rem;">درباره سایت</h2>
         <div class="glass" style="padding:2rem; line-height:2; backdrop-filter:blur(25px);">
-            <p>تک پلاس یک رسانه فناوری کاملاً خودکار است که توسط پیشرفته‌ترین مدل‌های هوش مصنوعی اداره می‌شود. هیچ انسانی در فرآیند تولید محتوا، مدیریت سایت یا پاسخگویی به کاربران دخالت ندارد – همه چیز توسط الگوریتم‌های یادگیری عمیق و پردازش زبان طبیعی انجام می‌شود.</p>
-            <p>هدف ما ارائه جدیدترین اخبار، تحلیل‌های دقیق، آموزش‌های برنامه‌نویسی (پایتون، جاوااسکریپت، هوش مصنوعی) و مقایسه محصولات دیجیتال به صورت کاملاً بی‌طرفانه و به‌روز است. هوش مصنوعی ما به‌طور مداوم منابع معتبر فناوری را رصد کرده و محتوایی منحصربه‌فرد تولید می‌کند.</p>
+            <p><strong>تک پلاس (Tech+)</strong> یک رسانه فناوری پیشرو و کاملاً خودکار است که با تلفیق هنر طراحی و قدرت هوش مصنوعی، پنجره‌ای رو به آینده می‌گشاید. این سایت به‌طور کامل توسط <strong>شهریار وزیری نسب</strong> طراحی و ساخته شده است و هر خط کد آن با عشق به فناوری و دقت فراوان نوشته شده است.</p>
+            <p>در تک پلاس، هدف ما ارائه جدیدترین اخبار، تحلیل‌های تخصصی، آموزش‌های برنامه‌نویسی و مقایسه محصولات دیجیتال به شکلی جذاب و بدون دخالت انسان است. هوش مصنوعی ما به‌طور مداوم منابع معتبر فناوری را رصد می‌کند و محتوایی منحصربه‌فرد به دو زبان فارسی و انگلیسی تولید می‌کند.</p>
             <p><strong>راهنمای بخش‌ها:</strong></p>
             <ul style="margin-right:2rem;">
-                <li><strong>خانه:</strong> اسلایدر اخبار و مقالات جدید</li>
-                <li><strong>مقالات:</strong> فهرست کامل مطالب با قابلیت جستجو و فیلتر دسته‌بندی</li>
-                <li><strong>مقایسه:</strong> مقایسه تخصصی مشخصات فنی محصولات دیجیتال (که توسط هوش مصنوعی به‌روز می‌شود)</li>
-                <li><strong>دستیار هوش مصنوعی (آیکون شناور پایین صفحه):</strong> می‌توانید هر سوال فناوری بپرسید و پاسخ دقیق دریافت کنید.</li>
+                <li><strong>خانه:</strong> اسلایدر اخبار و جدیدترین مقالات</li>
+                <li><strong>مقالات:</strong> آرشیو کامل مطالب با جستجو و دسته‌بندی</li>
+                <li><strong>مقایسه:</strong> مقایسه تخصصی مشخصات فنی محصولات دیجیتال (که توسط ایجنت هوشمند به‌روز می‌شود)</li>
+                <li><strong>دستیار هوش مصنوعی (دکمه شناور پایین صفحه):</strong> پاسخ به پرسش‌های فناوری شما</li>
             </ul>
-            <p>تک پلاس نماد نسل جدید رسانه‌هاست – رسانه‌ای که هرگز نمی‌خوابد، همیشه در حال یادگیری است و محتوای کاملاً اختصاصی ارائه می‌دهد.</p>
+            <p>تک پلاس نماد نسل جدید رسانه‌هاست – رسانه‌ای که هرگز نمی‌خوابد، همواره در حال یادگیری است و محتوایی اختصاصی و باکیفیت ارائه می‌دهد.</p>
+            <p style="margin-top:2rem; font-style:italic;">«ساخته‌شده با افتخار توسط شهریار وزیری نسب»</p>
         </div>
     </div>
 </div>
@@ -384,10 +375,8 @@
     <div class="container" id="profileContent"></div>
 </div>
 
-<!-- AI Assistant (Font Awesome icon, no emoji) -->
-<div class="ai-bubble" id="aiBubble" onclick="openChat()">
-    <i class="fas fa-robot"></i>
-</div>
+<!-- دستیار هوش مصنوعی -->
+<div class="ai-bubble" id="aiBubble" onclick="openChat()"><i class="fas fa-robot"></i></div>
 <div class="chat-overlay" id="chatOverlay">
     <div class="chat-container">
         <div style="padding:1rem; background:rgba(108,99,255,0.4); display:flex; justify-content:space-between;">
@@ -395,7 +384,7 @@
             <button style="background:none;border:none;color:white;font-size:1.5rem;" onclick="closeChat()">&times;</button>
         </div>
         <div class="chat-messages" id="chatMessages">
-            <div class="chat-msg bot">سلام! هر سوالی در زمینه فناوری داری، بپرس. (می‌تونی کلید Gemini API رو برای پاسخ‌های دقیق‌تر وارد کنی)</div>
+            <div class="chat-msg bot">سلام! هر سوالی در زمینه فناوری دارید، بپرسید.</div>
         </div>
         <div class="chat-input-area" style="flex-direction:column; gap:0.5rem;">
             <div style="display:flex; gap:0.5rem;">
@@ -407,110 +396,88 @@
     </div>
 </div>
 
-<!-- Login Modal -->
+<!-- مودال ورود -->
 <div class="modal" id="loginModal">
     <div class="modal-content">
-        <h3 style="font-weight:900; margin-bottom:1rem;" data-translate="login">ورود / ثبت‌نام</h3>
+        <h3 style="font-weight:900; margin-bottom:1rem;">ورود / ثبت‌نام</h3>
         <div class="tab-buttons">
-            <button class="tab-btn active" onclick="switchLoginTab('email')" data-translate="email">ایمیل</button>
-            <button class="tab-btn" onclick="switchLoginTab('phone')" data-translate="phone">شماره</button>
+            <button class="tab-btn active" onclick="switchLoginTab('email')">ایمیل</button>
+            <button class="tab-btn" onclick="switchLoginTab('phone')">شماره</button>
         </div>
         <div id="loginFormEmail">
             <input type="email" id="loginEmail" placeholder="ایمیل خود را وارد کنید" required style="width:100%; padding:12px; margin:10px 0; border-radius:50px; border:1px solid var(--glass-border); background:var(--card-bg);">
-            <button class="btn btn-primary" onclick="sendOTP('email')" style="width:100%;" data-translate="sendOTP">دریافت کد تأیید</button>
+            <button class="btn btn-primary" onclick="sendOTP('email')" style="width:100%;">دریافت کد تأیید</button>
         </div>
         <div id="loginFormPhone" style="display:none;">
             <input type="tel" id="loginPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required style="width:100%; padding:12px; margin:10px 0; border-radius:50px; border:1px solid var(--glass-border); background:var(--card-bg);">
-            <button class="btn btn-primary" onclick="sendOTP('phone')" style="width:100%;" data-translate="sendOTP">دریافت کد تأیید</button>
+            <button class="btn btn-primary" onclick="sendOTP('phone')" style="width:100%;">دریافت کد تأیید</button>
         </div>
         <div id="otpSection" style="display:none;">
             <input type="text" id="otpCode" placeholder="کد ۶ رقمی" maxlength="6" style="width:100%; padding:12px; margin:10px 0; border-radius:50px; border:1px solid var(--glass-border); text-align:center; font-size:1.2rem;">
-            <button class="btn btn-primary" onclick="verifyOTP()" style="width:100%;" data-translate="verify">تأیید</button>
+            <button class="btn btn-primary" onclick="verifyOTP()" style="width:100%;">تأیید</button>
         </div>
     </div>
 </div>
 
 <footer style="margin-top:4rem; background:var(--footer-bg); backdrop-filter:blur(20px); color:var(--footer-text); padding:2rem; text-align:center; border-top:1px solid var(--glass-border);">
-    <p>© ۲۰۲۶ تک پلاس | تمامی حقوق برای هوش مصنوعی محفوظ است</p>
+    <p>© ۲۰۲۶ تک پلاس | تمامی حقوق متعلق به شهریار وزیری نسب است.</p>
 </footer>
 
 <div id="backToTop" style="position:fixed; bottom:100px; right:30px; width:45px; height:45px; background:var(--primary); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; transition:0.3s; z-index:998; backdrop-filter:blur(10px);" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-    // ========== LANGUAGE ==========
-    let currentLang = 'fa'; // default Persian
+    // ======================== LANGUAGE ========================
+    let currentLang = 'fa';
     const translations = {
-        fa: { home:'خانه', articles:'مقالات', compare:'مقایسه', about:'درباره ما', latestArticles:'جدیدترین مقالات', search:'جستجو...', all:'همه', noArticle:'هنوز مقاله‌ای منتشر نشده است.', login:'ورود / ثبت‌نام', email:'ایمیل', phone:'شماره', sendOTP:'دریافت کد تأیید', verify:'تأیید', profile:'پروفایل', logout:'خروج', hero1:'آینده را با تک پلاس کاوش کنید', hero2:'رسانه فناوری کاملاً خودکار توسط هوش مصنوعی', hero3:'تحلیل‌های عمیق و به‌روز', hero4:'جدیدترین اخبار فناوری، آموزش برنامه‌نویسی و بررسی تخصصی', viewArticles:'مشاهده مقالات', chatPlaceholder:'سوال خود را بپرسید...', apiPlaceholder:'کلید Gemini API (اختیاری)', langLabel:'زبان سایت' },
-        en: { home:'Home', articles:'Articles', compare:'Compare', about:'About', latestArticles:'Latest Articles', search:'Search...', all:'All', noArticle:'No articles published yet.', login:'Login / Register', email:'Email', phone:'Phone', sendOTP:'Send OTP', verify:'Verify', profile:'Profile', logout:'Logout', hero1:'Explore the future with Tech+', hero2:'A fully automated tech media by AI', hero3:'Deep and up-to-date analysis', hero4:'Latest tech news, programming tutorials & expert reviews', viewArticles:'Browse Articles', chatPlaceholder:'Ask your question...', apiPlaceholder:'Gemini API Key (optional)', langLabel:'Language' }
+        fa: { home:'خانه', articles:'مقالات', compare:'مقایسه', about:'درباره سایت', latestArticles:'جدیدترین مقالات', search:'جستجو...', all:'همه', noArticle:'هنوز مقاله‌ای منتشر نشده است.', login:'ورود / ثبت‌نام', email:'ایمیل', phone:'شماره', sendOTP:'دریافت کد تأیید', verify:'تأیید', profile:'پروفایل', logout:'خروج', hero1:'آینده را با تک پلاس کاوش کنید', hero2:'رسانه فناوری خودکار، ساخته‌شده با هوش مصنوعی', hero3:'تحلیل‌های عمیق و به‌روز', hero4:'جدیدترین اخبار فناوری، آموزش برنامه‌نویسی و بررسی تخصصی', viewArticles:'مشاهده مقالات', chatPlaceholder:'سوال خود را بپرسید...', apiPlaceholder:'کلید Gemini API (اختیاری)', langLabel:'زبان' },
+        en: { home:'Home', articles:'Articles', compare:'Compare', about:'About', latestArticles:'Latest Articles', search:'Search...', all:'All', noArticle:'No articles published yet.', login:'Login / Register', email:'Email', phone:'Phone', sendOTP:'Send OTP', verify:'Verify', profile:'Profile', logout:'Logout', hero1:'Explore the future with Tech+', hero2:'Fully automated tech media, crafted with AI', hero3:'Deep and up-to-date analysis', hero4:'Latest tech news, programming tutorials & expert reviews', viewArticles:'Browse Articles', chatPlaceholder:'Ask your question...', apiPlaceholder:'Gemini API Key (optional)', langLabel:'Language' }
     };
-
     function setLanguage(lang) {
         currentLang = lang;
-        // Update all elements with data-translate
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.getAttribute('data-translate');
             if (translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
         });
-        // Update placeholders
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) searchInput.placeholder = translations[lang].search;
-        const chatInput = document.getElementById('chatInput');
-        if (chatInput) chatInput.placeholder = translations[lang].chatPlaceholder;
-        const apiKeyInput = document.getElementById('apiKeyInput');
-        if (apiKeyInput) apiKeyInput.placeholder = translations[lang].apiPlaceholder;
-        // Update hero text in active slide
+        document.getElementById('searchInput').placeholder = translations[lang].search;
+        document.getElementById('chatInput').placeholder = translations[lang].chatPlaceholder;
+        document.getElementById('apiKeyInput').placeholder = translations[lang].apiPlaceholder;
         const slide0 = document.querySelector('#home .slide.active div');
         if (slide0) {
-            const h1 = slide0.querySelector('h1');
-            const p = slide0.querySelector('p');
-            if (h1) h1.textContent = translations[lang].hero1;
-            if (p) p.textContent = translations[lang].hero2;
+            slide0.querySelector('h1').textContent = translations[lang].hero1;
+            slide0.querySelector('p').textContent = translations[lang].hero2;
         }
-        // Update language toggle button in profile if present
-        const langBtn = document.getElementById('profileLangBtn');
-        if (langBtn) langBtn.textContent = lang === 'fa' ? 'English' : 'فارسی';
         localStorage.setItem('techPlusLang', lang);
-        // Re-render current page to reflect language in article cards
-        if (currentPage === 'articles') filterArticles();
-        else if (currentPage === 'home') renderTrending();
-        else if (currentPage === 'articleDetail' && currentArticleId) showArticleDetail(currentArticleId);
     }
-
-    // Load saved language
     const savedLang = localStorage.getItem('techPlusLang') || 'fa';
     setLanguage(savedLang);
 
-    // ========== DATA ==========
+    // ======================== DATA ========================
     let allArticles = [];
     let productsList = [];
 
-    // Fetch articles from articles.json
-    fetch('articles.json')
-        .then(res => res.json())
-        .then(data => {
-            allArticles = data;
-            renderTrending();
-        })
-        .catch(() => {
-            allArticles = [];
-            renderTrending();
-        });
+    async function loadData() {
+        try {
+            const res = await fetch('articles.json');
+            if (res.ok) allArticles = await res.json();
+            else allArticles = [];
+        } catch(e) { allArticles = []; }
+        try {
+            const res = await fetch('products.json');
+            if (res.ok) productsList = await res.json();
+            else productsList = [];
+        } catch(e) { productsList = []; }
+        renderTrending();
+    }
+    loadData();
 
-    // Fetch products from products.json
-    fetch('products.json')
-        .then(res => res.json())
-        .then(data => { productsList = data; })
-        .catch(() => { productsList = []; });
-
-    // ========== USER SYSTEM ==========
+    // ======================== USER SYSTEM ========================
     let currentUser = JSON.parse(localStorage.getItem('techPlusUser')) || null;
     let pendingOTP = null;
-
     function saveUser() { localStorage.setItem('techPlusUser', JSON.stringify(currentUser)); }
     function updateUserUI() {
         const area = document.getElementById('userArea');
-        if (currentUser && currentUser.isLoggedIn) {
+        if (currentUser?.isLoggedIn) {
             area.innerHTML = `<div class="dropdown">
                 <div class="user-avatar">${currentUser.name.charAt(0)}</div>
                 <div class="dropdown-content">
@@ -556,9 +523,7 @@
             currentUser = { email, name, isLoggedIn: true, savedArticles: [], readingHistory: [] };
             saveUser(); updateUserUI(); closeLogin(); navigate('home');
             pendingOTP = null;
-        } else {
-            alert('کد اشتباه است!');
-        }
+        } else alert('کد اشتباه است!');
     }
     function resetLoginForm() {
         document.getElementById('otpSection').style.display = 'none';
@@ -568,21 +533,16 @@
     }
     function logout() { currentUser = null; saveUser(); updateUserUI(); navigate('home'); }
 
-    // ========== MOBILE MENU ==========
-    function toggleMobileMenu() {
-        document.getElementById('mobileMenuOverlay').classList.toggle('active');
-    }
-    function closeMobileMenu() {
-        document.getElementById('mobileMenuOverlay').classList.remove('active');
-    }
+    // ======================== MOBILE MENU ========================
+    function toggleMobileMenu() { document.getElementById('mobileMenuOverlay').classList.toggle('active'); }
+    function closeMobileMenu() { document.getElementById('mobileMenuOverlay').classList.remove('active'); }
 
-    // ========== NAVIGATION ==========
-    let currentPage = 'home';
-    let currentArticleId = null;
-
+    // ======================== NAVIGATION ========================
+    let currentPage = 'home', currentArticleId;
     function navigate(page) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById(page).classList.add('active');
+        const target = document.getElementById(page);
+        if (target) target.classList.add('active');
         currentPage = page;
         if (page === 'articles') initArticleList();
         else if (page === 'compare') buildCompareSelectors();
@@ -603,11 +563,12 @@
         const title = article.title?.[currentLang] || article.title?.fa || '';
         const excerpt = article.excerpt?.[currentLang] || article.excerpt?.fa || '';
         const date = article.date || '';
-        const category = article.category || 'Unknown';
+        const category = article.category || 'Technology';
         const saved = currentUser?.savedArticles?.includes(article.id);
         const iconMap = { AI:'robot', Quantum:'atom', Phone:'mobile-alt', Laptop:'laptop', Programming:'code', Gadgets:'clock', Space:'rocket', Science:'flask' };
+        const icon = iconMap[category] || 'laptop-code';
         return `<div class="article-card" onclick="navigate('articleDetail'); showArticleDetail(${article.id})">
-            <div class="article-img"><div class="ai-art"></div><i class="fas fa-${iconMap[category] || 'laptop-code'}"></i></div>
+            <div class="article-img"><div class="ai-art"></div><i class="fas fa-${icon}"></i></div>
             <div class="article-body">
                 <span class="article-tag">${category}</span>
                 <i class="save-btn fas fa-bookmark ${saved?'saved':''}" onclick="event.stopPropagation(); toggleSaveArticle(${article.id})"></i>
@@ -618,11 +579,8 @@
         </div>`;
     }
 
-    // ========== ARTICLES LIST ==========
-    let articlesPerPage = 12;
-    let currentArticlePage = 1;
-    let filteredIds = [];
-
+    // ======================== ARTICLES LIST & PAGINATION ========================
+    let articlesPerPage = 12, currentArticlePage = 1, filteredIds = [];
     function initArticleList() {
         const search = document.getElementById('searchInput').value.trim().toLowerCase();
         const cat = document.getElementById('categoryFilter').value;
@@ -636,10 +594,9 @@
         currentArticlePage = 1;
         renderArticles();
     }
-
     function renderArticles() {
-        const start = (currentArticlePage - 1) * articlesPerPage;
-        const pageIds = filteredIds.slice(start, start + articlesPerPage);
+        const start = (currentArticlePage-1) * articlesPerPage;
+        const pageIds = filteredIds.slice(start, start+articlesPerPage);
         let html = '';
         pageIds.forEach(id => {
             const a = allArticles.find(x => x.id === id);
@@ -648,21 +605,12 @@
         document.getElementById('articlesContainer').innerHTML = html || `<p>${translations[currentLang].noArticle}</p>`;
         renderPagination(Math.ceil(filteredIds.length / articlesPerPage));
     }
-
     function renderPagination(total) {
         let h = '';
-        for (let i = 1; i <= total; i++) {
-            h += `<button class="page-btn ${i === currentArticlePage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
-        }
+        for (let i=1; i<=total; i++) h += `<button class="page-btn ${i===currentArticlePage?'active':''}" onclick="goToPage(${i})">${i}</button>`;
         document.getElementById('pagination').innerHTML = h;
     }
-
-    function goToPage(p) {
-        currentArticlePage = p;
-        renderArticles();
-        window.scrollTo({ top: 200, behavior: 'smooth' });
-    }
-
+    function goToPage(p) { currentArticlePage = p; renderArticles(); window.scrollTo({top:200,behavior:'smooth'}); }
     function filterArticles() { initArticleList(); }
 
     function showArticleDetail(id) {
@@ -672,23 +620,19 @@
         if (currentUser) addToHistory(id);
         const title = a.title?.[currentLang] || a.title?.fa || '';
         const body = a.body?.[currentLang] || a.body?.fa || '';
-        const date = a.date || '';
-        const category = a.category || '';
         document.getElementById('articleDetailContent').innerHTML = `
             <h1>${title}</h1>
-            <div style="color:var(--gray);">${date} | ${category}</div>
+            <div style="color:var(--gray);">${a.date || ''} | ${a.category || ''}</div>
             <div style="margin-top:2rem;">${body}</div>
             <a href="#" class="link-card" onclick="navigate('articles')"><i class="fas fa-arrow-right"></i> بازگشت</a>
         `;
         window.addEventListener('scroll', updateReadingProgress);
     }
-
     function updateReadingProgress() {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        document.getElementById('readingProgress').style.width = (winScroll / height) * 100 + '%';
+        document.getElementById('readingProgress').style.width = (winScroll/height)*100 + '%';
     }
-
     function addToHistory(id) {
         if (!currentUser) return;
         if (!currentUser.readingHistory) currentUser.readingHistory = [];
@@ -698,7 +642,6 @@
             saveUser();
         }
     }
-
     function toggleSaveArticle(id) {
         if (!currentUser) { openLogin(); return; }
         const idx = currentUser.savedArticles.indexOf(id);
@@ -709,7 +652,7 @@
         else if (currentPage === 'articleDetail') showArticleDetail(id);
     }
 
-    // ========== COMPARE ==========
+    // ======================== COMPARE ========================
     let selProduct1 = null, selProduct2 = null;
     function buildCompareSelectors() {
         const container = document.getElementById('productSelector');
@@ -727,7 +670,7 @@
         filterProductOptions(1, '');
     }
     function filterProductOptions(idx, query) {
-        const filtered = productsList.filter(p => p.name.includes(query));
+        const filtered = productsList.filter(p => p.name.toLowerCase().includes(query.toLowerCase()));
         const dd = document.getElementById(`dropdown${idx}`);
         dd.innerHTML = filtered.map(p => `<div class="dropdown-option" onclick="selectProduct(${idx}, '${p.name}')">${p.name}</div>`).join('');
         dd.classList.add('show');
@@ -755,7 +698,7 @@
         `;
     }
 
-    // ========== PROFILE (with language toggle) ==========
+    // ======================== PROFILE ========================
     function renderProfile() {
         if (!currentUser) { navigate('home'); return; }
         document.getElementById('profileContent').innerHTML = `
@@ -776,13 +719,12 @@
     }
     function toggleLanguageFromProfile() {
         setLanguage(currentLang === 'fa' ? 'en' : 'fa');
-        renderProfile(); // refresh profile to update button text
-        // Also re-render current page if needed
+        renderProfile();
         if (currentPage === 'home') renderTrending();
         else if (currentPage === 'articles') filterArticles();
     }
 
-    // ========== AI CHAT ==========
+    // ======================== AI CHAT ========================
     function openChat() { document.getElementById('chatOverlay').classList.add('active'); }
     function closeChat() { document.getElementById('chatOverlay').classList.remove('active'); }
     async function sendMessage() {
@@ -799,22 +741,25 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        contents: [{ parts: [{ text: "تو یک دستیار خبره فناوری هستی. پاسخ کامل و به فارسی بده:\n" + text }] }]
+                        contents: [{ parts: [{ text: "تو یک دستیار خبره فناوری هستی. پاسخ کامل و مفید بده:\n" + text }] }]
                     })
                 });
                 const data = await response.json();
-                const botText = data.candidates[0].content.parts[0].text;
-                msgDiv.innerHTML += `<div class="chat-msg bot">${botText}</div>`;
+                if (data.candidates && data.candidates[0].content.parts[0].text) {
+                    msgDiv.innerHTML += `<div class="chat-msg bot">${data.candidates[0].content.parts[0].text}</div>`;
+                } else {
+                    msgDiv.innerHTML += `<div class="chat-msg bot">پاسخی دریافت نشد. لطفاً دوباره تلاش کنید.</div>`;
+                }
             } catch (err) {
-                msgDiv.innerHTML += `<div class="chat-msg bot">خطا در ارتباط با هوش مصنوعی. کلید معتبر است؟</div>`;
+                msgDiv.innerHTML += `<div class="chat-msg bot">خطا در ارتباط با هوش مصنوعی. لطفاً کلید خود را بررسی کنید.</div>`;
             }
         } else {
-            msgDiv.innerHTML += `<div class="chat-msg bot">برای پاسخ دقیق، لطفاً کلید Gemini API را وارد کنید. (راهنما در صفحه درباره ما)</div>`;
+            msgDiv.innerHTML += `<div class="chat-msg bot">برای پاسخ دقیق، لطفاً یک کلید Gemini API معتبر وارد کنید. (راهنما در بخش درباره سایت)</div>`;
         }
         msgDiv.scrollTop = msgDiv.scrollHeight;
     }
 
-    // ========== DARK MODE & PARTICLES ==========
+    // ======================== DARK MODE & PARTICLES ========================
     function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
         localStorage.setItem('dark', document.body.classList.contains('dark-mode'));
@@ -824,7 +769,7 @@
         particles: { number:{value:50}, size:{value:3}, color:{value:'#6C63FF'}, opacity:{value:0.2}, line_linked:{enable:true, opacity:0.1}, move:{speed:1} }
     });
 
-    // ========== HERO SLIDER ==========
+    // ======================== HERO SLIDER ========================
     let slideIdx = 0;
     function startHeroSlider() {
         setInterval(() => {
@@ -835,15 +780,15 @@
         }, 5000);
     }
 
-    // ========== BACK TO TOP ==========
+    // ======================== BACK TO TOP & AI BUBBLE ========================
     window.addEventListener('scroll', ()=>{
-        document.getElementById('backToTop').style.opacity = window.scrollY > 300 ? '1' : '0';
-        document.getElementById('aiBubble').classList.toggle('show', window.scrollY > 400);
+        document.getElementById('backToTop').style.opacity = window.scrollY>300 ? '1':'0';
+        document.getElementById('aiBubble').classList.toggle('show', window.scrollY>400);
     });
 
-    // ========== INIT ==========
+    // ======================== INIT ========================
     updateUserUI();
     navigate('home');
 </script>
 </body>
-  </html>
+            </html>
