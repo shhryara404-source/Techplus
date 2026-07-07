@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>هوش‌تک | Hoosh Tech</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236C63FF'/%3E%3Cstop offset='100%25' stop-color='%23FF6584'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Cpath d='M20 30 L20 70 M80 30 L80 70 M20 50 L80 50' stroke='url(%23g)' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='30' r='6' fill='%236C63FF'/%3E%3Ccircle cx='80' cy='70' r='6' fill='%23FF6584'/%3E%3Ccircle cx='80' cy='30' r='5' fill='%236C63FF'/%3E%3Ccircle cx='20' cy='70' r='5' fill='%23FF6584'/%3E%3Ccircle cx='50' cy='50' r='4' fill='white' opacity='0.8'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236C63FF'/%3E%3Cstop offset='100%25' stop-color='%23FF6584'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Cpath d='M30 25 L30 75 M70 25 L70 75 M30 50 L70 50' stroke='url(%23g)' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='25' r='5' fill='%236C63FF'/%3E%3Ccircle cx='70' cy='75' r='5' fill='%23FF6584'/%3E%3Ccircle cx='70' cy='25' r='4' fill='%236C63FF'/%3E%3Ccircle cx='30' cy='75' r='4' fill='%23FF6584'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -23,141 +23,191 @@
             --text: #2D3748;
             --card-bg: rgba(255,255,255,0.7);
             --header-bg: rgba(255,255,255,0.5);
-            --footer-bg: rgba(30,35,45,0.9);
-            --glass-bg: rgba(255,255,255,0.15);
-            --glass-border: rgba(255,255,255,0.3);
+            --footer-bg: rgba(30,35,45,0.95);
+            --glass-bg: rgba(255,255,255,0.2);
+            --glass-border: rgba(255,255,255,0.4);
             --font-main: 'Vazirmatn', sans-serif;
         }
         .dark-mode {
-            --bg: #1A202C; --text: #E2E8F0;
-            --card-bg: rgba(45,55,72,0.8); --header-bg: rgba(26,32,44,0.6);
-            --footer-bg: rgba(15,20,28,0.95); --shadow: 0 10px 30px rgba(0,0,0,0.4);
-            --glass-bg: rgba(0,0,0,0.3); --glass-border: rgba(255,255,255,0.1);
+            --bg: #1A202C;
+            --text: #E2E8F0;
+            --card-bg: rgba(45,55,72,0.85);
+            --header-bg: rgba(26,32,44,0.65);
+            --footer-bg: rgba(15,20,28,0.95);
+            --shadow: 0 10px 30px rgba(0,0,0,0.4);
+            --shadow-hover: 0 20px 40px rgba(108,99,255,0.3);
+            --glass-bg: rgba(0,0,0,0.3);
+            --glass-border: rgba(255,255,255,0.15);
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: var(--font-main); background: var(--bg); color: var(--text);
             line-height: 1.8; overflow-x: hidden; transition: background 0.5s, color 0.5s;
         }
-        #particles-js { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
+        #particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
         .container { max-width:1300px; margin:0 auto; padding:0 2rem; }
+
+        /* ===== HEADER ===== */
         header {
             background: var(--header-bg); backdrop-filter: blur(20px);
             padding:1rem 0; position:fixed; width:100%; top:0; z-index:1000;
             box-shadow:0 2px 20px rgba(0,0,0,0.05); border-bottom:1px solid var(--glass-border);
+            transition: background 0.3s;
         }
         .header-inner { display:flex; justify-content:space-between; align-items:center; }
-        .logo { display:flex; align-items:center; gap:0.5rem; text-decoration:none; }
-        .logo svg { width:48px; height:48px; }
+        .logo { display:flex; align-items:center; gap:0.7rem; text-decoration:none; }
+        .logo-icon {
+            width:55px; height:55px; position:relative; display:flex; align-items:center; justify-content:center;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+        @keyframes floatLogo {
+            0%,100% { transform: translateY(0) rotate(-3deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+        .logo-icon svg { width:100%; height:100%; }
         .logo-text {
-            font-size:2rem; font-weight:900;
+            font-size:2.2rem; font-weight:900;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            letter-spacing: -0.5px;
         }
         .nav-links { display:flex; list-style:none; gap:2rem; }
-        .nav-links a { color:var(--text); font-weight:600; text-decoration:none; position:relative; }
-        .nav-links a::after {
-            content:''; position:absolute; bottom:-3px; left:0; width:0; height:2px;
-            background: var(--primary); transition: 0.3s;
+        .nav-links a {
+            color:var(--text); font-weight:600; text-decoration:none; position:relative;
+            transition: color 0.3s;
         }
+        .nav-links a::after {
+            content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px;
+            background: var(--primary); transition: width 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
         .nav-links a:hover::after { width:100%; }
-        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; }
+        .user-menu { display:flex; align-items:center; gap:1rem; }
+        .settings-btn {
+            background: none; border:none; font-size:1.4rem; cursor:pointer; color: var(--text);
+            transition: transform 0.3s;
+        }
+        .settings-btn:hover { transform: rotate(90deg); }
+        .hamburger {
+            display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;
+        }
         .hamburger span { width:25px; height:3px; background:var(--text); border-radius:3px; transition:0.3s; }
+
+        /* ===== MOBILE MENU ===== */
         .mobile-menu-overlay {
             position:fixed; top:0; left:0; width:100%; height:100%;
-            background:rgba(0,0,0,0.4); backdrop-filter:blur(10px); z-index:2000;
-            display:none; align-items:center; justify-content:center;
+            background:rgba(0,0,0,0.4); backdrop-filter:blur(15px);
+            z-index:2000; display:none; align-items:center; justify-content:center;
         }
         .mobile-menu-overlay.active { display:flex; }
         .mobile-menu {
-            background:var(--card-bg); backdrop-filter:blur(30px); border-radius:20px;
+            background: var(--card-bg); backdrop-filter: blur(30px); border-radius: 20px;
             padding:2rem; width:80%; max-width:350px; text-align:center;
-            border:1px solid var(--glass-border);
+            border:1px solid var(--glass-border); box-shadow: var(--shadow-hover);
+            animation: slideIn 0.3s ease;
         }
+        @keyframes slideIn { from { opacity:0; transform: scale(0.9); } to { opacity:1; transform: scale(1); } }
         .mobile-menu a { display:block; padding:1rem; color:var(--text); font-weight:600; text-decoration:none; }
-        .theme-switch { display:flex; justify-content:center; gap:2rem; margin-top:1.5rem; }
+        .theme-switch-row { display:flex; justify-content:center; gap:2rem; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--glass-border); }
         .theme-btn {
             font-size:1.8rem; cursor:pointer; padding:0.5rem; border-radius:50%;
-            background:var(--glass-bg); border:1px solid var(--glass-border); transition:0.3s;
+            background: var(--glass-bg); border:1px solid var(--glass-border); transition:0.3s;
         }
-        .sun-btn { color:var(--primary-light); } .moon-btn { color:var(--primary-light); }
-        .dark-mode .sun-btn { opacity:0.6; } .dark-mode .moon-btn { color:var(--secondary); }
+        .sun-btn { color: var(--primary-light); }
+        .moon-btn { color: var(--primary-light); }
+        .dark-mode .sun-btn { opacity:0.6; }
+        .dark-mode .moon-btn { color: var(--secondary); }
 
-        .page { display:none; padding-top:90px; min-height:80vh; animation: fadeIn 0.4s ease; }
+        /* ===== PAGES ===== */
+        .page { display:none; padding-top:100px; min-height:80vh; animation: fadeUp 0.5s ease; }
         .page.active { display:block; }
-        @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes fadeUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
 
+        /* ===== HERO ===== */
         .hero {
             background: linear-gradient(135deg, var(--primary-light), var(--secondary));
-            border-radius: 25px; padding:3rem 2.5rem; color:white; margin-bottom:3rem;
-            display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+            border-radius: 30px; padding:4rem 3rem; color:white; margin-bottom:4rem;
+            position:relative; overflow:hidden; display:flex; align-items:center; gap:2rem;
         }
-        .hero-content h1 { font-size:2.5rem; font-weight:900; }
-        .hero-content p { font-size:1.2rem; margin:1rem 0 2rem; opacity:0.9; }
+        .hero::before {
+            content:''; position:absolute; top:-50px; right:-50px; width:200px; height:200px;
+            background: rgba(255,255,255,0.1); border-radius:50%; animation: pulseHero 4s infinite;
+        }
+        @keyframes pulseHero {
+            0%,100% { transform: scale(1); opacity:0.3; }
+            50% { transform: scale(1.3); opacity:0.1; }
+        }
+        .hero-content { flex:1; z-index:1; }
+        .hero-content h1 { font-size:2.8rem; font-weight:900; margin-bottom:1rem; }
+        .hero-content p { font-size:1.2rem; opacity:0.95; margin-bottom:2rem; }
+        .hero-illustration {
+            flex:1; display:flex; justify-content:center; align-items:center;
+        }
+        .hero-illustration svg { width:80%; max-width:400px; animation: floatHero 6s infinite ease-in-out; }
+        @keyframes floatHero {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
 
+        /* ===== BUTTONS ===== */
         .btn {
-            display:inline-block; padding:12px 28px; border-radius:50px;
-            font-weight:700; text-decoration:none; transition:0.3s; border:none; cursor:pointer;
+            display:inline-block; padding:14px 32px; border-radius:50px; font-weight:700;
+            text-decoration:none; transition: var(--transition); border:none; cursor:pointer;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        .btn-primary { background:white; color:var(--primary); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
-        .btn-primary:hover { transform:translateY(-3px); box-shadow:0 15px 35px rgba(0,0,0,0.15); }
+        .btn-primary { background:white; color:var(--primary); }
+        .btn-primary:hover { transform:translateY(-3px); box-shadow: 0 15px 35px rgba(0,0,0,0.25); }
 
-        .section-title {
-            text-align:center; font-size:2rem; margin-bottom:2rem;
-            background:linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-        }
-
-        .articles-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:2rem; }
+        /* ===== ARTICLE CARDS ===== */
+        .articles-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:2rem; margin-top:2rem; }
         .article-card {
             background: var(--card-bg); backdrop-filter: blur(15px); border-radius: 20px;
-            overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.05); transition:0.3s; cursor:pointer;
-            border:1px solid var(--glass-border);
+            overflow:hidden; box-shadow: var(--shadow); transition: var(--transition);
+            cursor:pointer; border:1px solid var(--glass-border);
         }
-        .article-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(108,99,255,0.2); }
-        .article-img { height:180px; background:linear-gradient(45deg, var(--primary-light), var(--secondary)); position:relative; }
+        .article-card:hover { transform: translateY(-10px) rotateX(2deg); box-shadow: var(--shadow-hover); }
+        .article-img { height:180px; background: linear-gradient(45deg, var(--primary-light), var(--secondary)); position:relative; }
         .article-img i { position:absolute; bottom:20px; right:20px; color:white; font-size:2.5rem; opacity:0.9; }
         .article-body { padding:1.2rem; }
         .article-tag { background:rgba(108,99,255,0.15); color:var(--primary); padding:0.2rem 0.8rem; border-radius:50px; font-size:0.75rem; }
-        .article-body h3 { font-size:1.2rem; margin:0.5rem 0; }
+        .article-body h3 { font-size:1.2rem; margin:0.8rem 0 0.5rem; }
         .article-body p { color:var(--gray); font-size:0.95rem; }
 
+        /* ===== FILTER BAR (Glass) ===== */
         .filter-bar { display:flex; gap:1rem; margin:1.5rem 0; flex-wrap:wrap; }
         .search-box, .category-select {
             flex:1; min-width:200px; padding:14px 20px; border-radius:50px;
-            border:1px solid var(--glass-border); background:var(--card-bg); backdrop-filter:blur(10px);
+            border:1px solid var(--glass-border); background: var(--card-bg); backdrop-filter: blur(15px);
             font-family:var(--font-main); color:var(--text); transition:0.3s;
         }
-        .search-box:focus, .category-select:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(108,99,255,0.2); }
+        .category-select { -webkit-appearance:none; appearance:none; }
 
-        .pagination { display:flex; justify-content:center; gap:0.5rem; margin:2rem 0; }
+        /* ===== PAGINATION ===== */
+        .pagination { display:flex; justify-content:center; gap:0.5rem; margin:2.5rem 0; }
         .page-btn {
-            padding:0.5rem 1rem; border-radius:50px; background:var(--card-bg); border:1px solid var(--glass-border);
+            padding:0.6rem 1.2rem; border-radius:50px; background:var(--card-bg); border:1px solid var(--glass-border);
             cursor:pointer; transition:0.3s; color:var(--text);
         }
-        .page-btn.active { background:var(--primary); color:white; border-color:var(--primary); }
+        .page-btn.active, .page-btn:hover { background:var(--primary); color:white; border-color:var(--primary); }
 
-        /* Liquid Glass Dropdowns */
-        .dropdown-options {
-            position:absolute; top:100%; left:0; width:100%; max-height:220px; overflow-y:auto;
-            background: rgba(255,255,255,0.25); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border-radius:15px; border:1px solid rgba(255,255,255,0.5); box-shadow:0 20px 40px rgba(0,0,0,0.15);
-            z-index:10; display:none; margin-top:8px;
+        /* ===== ABOUT PAGE ===== */
+        .about-content {
+            background: var(--card-bg); backdrop-filter: blur(20px); border-radius: 20px;
+            padding:2.5rem; border:1px solid var(--glass-border); line-height:2.2;
         }
-        .dropdown-options.show { display:block; }
-        .dropdown-option { padding:0.8rem 1.2rem; cursor:pointer; color:var(--text); transition:0.2s; }
-        .dropdown-option:hover { background:rgba(108,99,255,0.15); }
 
-        /* AI Bubble */
+        /* ===== AI BUBBLE ===== */
         .ai-bubble {
             position:fixed; bottom:30px; right:30px; width:60px; height:60px;
             border-radius:50%; background:linear-gradient(135deg, var(--primary), var(--secondary));
             box-shadow:0 10px 30px rgba(108,99,255,0.5); display:none; align-items:center; justify-content:center;
-            cursor:pointer; z-index:999; animation: float 3s infinite; color:white; font-size:1.8rem;
+            cursor:pointer; z-index:999; animation: bounceIn 2s infinite; color:white; font-size:1.8rem;
         }
         .ai-bubble.show { display:flex; }
-        @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
-
+        @keyframes bounceIn {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
         .chat-overlay {
             position:fixed; top:0; left:0; width:100%; height:100%;
             background:rgba(0,0,0,0.6); backdrop-filter:blur(15px); display:none;
@@ -175,255 +225,328 @@
         .chat-msg.bot { background:var(--card-bg); align-self:flex-start; }
 
         .reading-progress {
-            position:fixed; top:0; left:0; height:3px;
-            background:linear-gradient(135deg, var(--primary), var(--secondary)); z-index:1001;
+            position:fixed; top:0; left:0; height:4px; background:linear-gradient(135deg, var(--primary), var(--secondary));
+            z-index:1001; transition: width 0.1s;
+        }
+
+        /* ===== SETTINGS MODAL ===== */
+        .modal {
+            position:fixed; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.5); backdrop-filter:blur(10px); display:none;
+            align-items:center; justify-content:center; z-index:3000;
+        }
+        .modal.active { display:flex; }
+        .modal-content {
+            background:var(--card-bg); backdrop-filter:blur(30px); border-radius:20px;
+            padding:2rem; width:90%; max-width:400px; border:1px solid var(--glass-border);
         }
 
         @media (max-width:768px) {
             .nav-links { display:none; } .hamburger { display:flex; }
-            .hero { padding:2rem 1.5rem; text-align:center; }
-            .hero-content h1 { font-size:1.8rem; }
+            .hero { flex-direction:column; text-align:center; padding:3rem 2rem; }
+            .hero-content h1 { font-size:2rem; }
             .articles-grid { grid-template-columns:1fr; }
         }
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div class="reading-progress" id="readingProgress"></div>
 
-<div id="particles-js"></div>
-<div class="reading-progress" id="readingProgress"></div>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div class="mobile-menu">
-        <a href="#" onclick="navigate('home');closeMobileMenu()">خانه</a>
-        <a href="#" onclick="navigate('articles');closeMobileMenu()">مقالات</a>
-        <a href="#" onclick="navigate('compare');closeMobileMenu()">مقایسه</a>
-        <a href="#" onclick="navigate('about');closeMobileMenu()">درباره سایت</a>
-        <div class="theme-switch">
-            <span class="theme-btn sun-btn" onclick="setLightMode();closeMobileMenu()"><i class="fas fa-sun"></i></span>
-            <span class="theme-btn moon-btn" onclick="setDarkMode();closeMobileMenu()"><i class="fas fa-moon"></i></span>
-        </div>
-    </div>
-</div>
-
-<header>
-    <div class="container header-inner">
-        <a href="#" class="logo" onclick="navigate('home')">
-            <svg viewBox="0 0 100 100">
-                <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6C63FF"/><stop offset="100%" stop-color="#FF6584"/></linearGradient></defs>
-                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#g)" stroke-width="4"/>
-                <path d="M25 25 L25 75 M75 25 L75 75 M25 50 L75 50" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="25" cy="25" r="6" fill="#6C63FF"/><circle cx="75" cy="75" r="6" fill="#FF6584"/>
-                <circle cx="75" cy="25" r="4" fill="#6C63FF"/><circle cx="25" cy="75" r="4" fill="#FF6584"/>
-            </svg>
-            <span class="logo-text">هوش‌تک</span>
-        </a>
-        <nav>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="navigate('home')">خانه</a></li>
-                <li><a href="#" onclick="navigate('articles')">مقالات</a></li>
-                <li><a href="#" onclick="navigate('compare')">مقایسه</a></li>
-                <li><a href="#" onclick="navigate('about')">درباره سایت</a></li>
-            </ul>
-        </nav>
-        <div class="user-menu">
-            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<div id="home" class="page active">
-    <div class="container">
-        <div class="hero">
-            <div class="hero-content">
-                <h1>آینده را با هوش‌تک کاوش کنید</h1>
-                <p>رسانه فناوری خودکار با قدرت هوش مصنوعی</p>
-                <a href="#" class="btn btn-primary" onclick="navigate('articles')">مشاهده مقالات</a>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <a href="#" onclick="navigate('home');closeMobileMenu()">خانه</a>
+            <a href="#" onclick="navigate('articles');closeMobileMenu()">مقالات</a>
+            <a href="#" onclick="navigate('compare');closeMobileMenu()">مقایسه</a>
+            <a href="#" onclick="navigate('about');closeMobileMenu()">درباره ما</a>
+            <div class="theme-switch-row">
+                <span class="theme-btn sun-btn" onclick="setLightMode();closeMobileMenu()"><i class="fas fa-sun"></i></span>
+                <span class="theme-btn moon-btn" onclick="setDarkMode();closeMobileMenu()"><i class="fas fa-moon"></i></span>
             </div>
         </div>
-        <h2 class="section-title">جدیدترین مقالات</h2>
-        <div id="latestGrid" class="articles-grid"></div>
     </div>
-</div>
 
-<div id="articles" class="page">
-    <div class="container">
-        <h2>آرشیو مقالات</h2>
-        <div class="filter-bar">
-            <input type="text" id="searchInput" class="search-box" placeholder="جستجو..." oninput="filterArticles()">
-            <select id="categoryFilter" class="category-select" onchange="filterArticles()">
-                <option value="all">همه</option>
-                <option value="AI">هوش مصنوعی</option>
-                <option value="Programming">برنامه‌نویسی</option>
-                <option value="Phone">موبایل</option>
-                <option value="Laptop">لپ‌تاپ</option>
-                <option value="BuyingGuide">راهنمای خرید</option>
-            </select>
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo" onclick="navigate('home')">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6C63FF"/>
+                                <stop offset="100%" stop-color="#FF6584"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- حرف H -->
+                        <path d="M20 25 L20 75 M20 50 L40 50 M60 50 L80 50 M80 25 L80 75" stroke="url(#lg)" stroke-width="8" stroke-linecap="round"/>
+                        <!-- نقطه‌های تزئینی -->
+                        <circle cx="20" cy="25" r="6" fill="#6C63FF"/>
+                        <circle cx="80" cy="75" r="6" fill="#FF6584"/>
+                        <circle cx="50" cy="25" r="4" fill="#6C63FF"/>
+                        <circle cx="50" cy="75" r="4" fill="#FF6584"/>
+                        <!-- حلقه بیرونی -->
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#lg)" stroke-width="3" stroke-dasharray="10 15" opacity="0.6">
+                            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                <span class="logo-text">هوش‌تک</span>
+            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" onclick="navigate('home')">خانه</a></li>
+                    <li><a href="#" onclick="navigate('articles')">مقالات</a></li>
+                    <li><a href="#" onclick="navigate('compare')">مقایسه</a></li>
+                    <li><a href="#" onclick="navigate('about')">درباره ما</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <button class="settings-btn" onclick="openSettings()" title="تنظیمات"><i class="fas fa-cog"></i></button>
+                <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <div id="articlesContainer" class="articles-grid"><p>در حال بارگذاری...</p></div>
-        <div id="pagination" class="pagination"></div>
+    </header>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <h3 style="margin-bottom:1.5rem;">تنظیمات</h3>
+            <p><strong>زبان / Language:</strong></p>
+            <button class="btn btn-outline" onclick="setLanguage('fa')" style="margin:0.5rem;">فارسی</button>
+            <button class="btn btn-outline" onclick="setLanguage('en')">English</button>
+            <button class="btn btn-primary" onclick="closeSettings()" style="margin-top:1.5rem; width:100%;">بستن</button>
+        </div>
     </div>
-</div>
 
-<div id="articleDetail" class="page"><div class="container" id="articleDetailContent" style="max-width:800px;margin:0 auto;"></div></div>
-<div id="compare" class="page"><div class="container"><h2>مقایسه محصولات</h2><p>بخش مقایسه به‌زودی تکمیل می‌شود.</p></div></div>
-<div id="about" class="page"><div class="container" style="max-width:800px;margin:0 auto;"><h2>درباره هوش‌تک</h2><div class="glass" style="padding:2rem;border-radius:20px;backdrop-filter:blur(20px);"><p>هوش‌تک (Hoosh Tech) یک رسانه فناوری خودکار و پیشرو است که توسط <strong>شهریار وزیری نسب</strong> ساخته شده است. تمام محتوای سایت توسط هوش مصنوعی تولید و مدیریت می‌شود.</p></div></div></div>
-
-<div class="ai-bubble" id="aiBubble" onclick="openChat()"><i class="fas fa-robot"></i></div>
-<div class="chat-overlay" id="chatOverlay">
-    <div class="chat-container">
-        <div style="padding:1rem;background:rgba(108,99,255,0.4);display:flex;justify-content:space-between;">
-            <span style="color:white;font-weight:bold;">دستیار هوش مصنوعی</span>
-            <button style="background:none;border:none;color:white;font-size:1.5rem;" onclick="closeChat()">&times;</button>
-        </div>
-        <div class="chat-messages" id="chatMessages"><div class="chat-msg bot">سلام! هر سوالی دارید بپرسید.</div></div>
-        <div style="padding:0.8rem;display:flex;gap:0.5rem;">
-            <input type="text" id="chatInput" placeholder="سوال خود را..." style="flex:1;padding:0.8rem;border-radius:50px;border:1px solid var(--glass-border);">
-            <button class="btn btn-primary" onclick="sendMessage()">ارسال</button>
+    <!-- Pages -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 id="heroTitle">آینده را با هوش‌تک کاوش کنید</h1>
+                    <p id="heroDesc">رسانه فناوری خودکار با قدرت هوش مصنوعی</p>
+                    <a href="#" class="btn btn-primary" onclick="navigate('articles')">مشاهده مقالات</a>
+                </div>
+                <div class="hero-illustration">
+                    <svg viewBox="0 0 200 150" fill="none">
+                        <circle cx="100" cy="75" r="60" stroke="#fff" stroke-width="2" opacity="0.2"/>
+                        <path d="M60 60 L140 90 M60 90 L140 60" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                        <circle cx="60" cy="60" r="8" fill="#fff" opacity="0.9"/>
+                        <circle cx="140" cy="90" r="8" fill="#fff" opacity="0.9"/>
+                        <circle cx="60" cy="90" r="6" fill="#fff" opacity="0.6"/>
+                        <circle cx="140" cy="60" r="6" fill="#fff" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">جدیدترین مقالات</h2>
+            <div id="latestGrid" class="articles-grid"></div>
         </div>
     </div>
-</div>
 
-<footer style="margin-top:4rem;background:var(--footer-bg);backdrop-filter:blur(20px);padding:2rem;text-align:center;color:white;">
-    <p>© ۲۰۲۶ هوش‌تک | تمامی حقوق متعلق به شهریار وزیری نسب است.</p>
-</footer>
+    <div id="articles" class="page">
+        <div class="container">
+            <h2>آرشیو مقالات</h2>
+            <div class="filter-bar">
+                <input type="text" id="searchInput" class="search-box" placeholder="جستجو..." oninput="filterArticles()">
+                <select id="categoryFilter" class="category-select" onchange="filterArticles()">
+                    <option value="all">همه</option>
+                    <option value="AI">هوش مصنوعی</option>
+                    <option value="Programming">برنامه‌نویسی</option>
+                    <option value="Phone">موبایل</option>
+                    <option value="Laptop">لپ‌تاپ</option>
+                    <option value="BuyingGuide">راهنمای خرید</option>
+                </select>
+            </div>
+            <div id="articlesContainer" class="articles-grid"><p>در حال بارگذاری...</p></div>
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-// تنظیم ذرات
-particlesJS('particles-js', { particles: { number:{value:60}, size:{value:3}, color:{value:'#6C63FF'}, opacity:{value:0.15}, line_linked:{enable:true,opacity:0.08}, move:{speed:1} } });
+    <div id="articleDetail" class="page">
+        <div class="container" id="articleDetailContent" style="max-width:800px; margin:0 auto;"></div>
+    </div>
 
-// حالت تاریک/روشن
-function setDarkMode() { document.body.classList.add('dark-mode'); localStorage.setItem('dark','true'); }
-function setLightMode() { document.body.classList.remove('dark-mode'); localStorage.setItem('dark','false'); }
-if(localStorage.getItem('dark') === 'true') document.body.classList.add('dark-mode');
+    <div id="compare" class="page">
+        <div class="container"><h2>مقایسه محصولات</h2><p>این بخش به‌زودی تکمیل می‌شود.</p></div>
+    </div>
 
-// منوی موبایل
-function toggleMobileMenu() { document.getElementById('mobileMenuOverlay').classList.toggle('active'); }
-function closeMobileMenu() { document.getElementById('mobileMenuOverlay').classList.remove('active'); }
+    <div id="about" class="page">
+        <div class="container" style="max-width:800px; margin:0 auto;">
+            <h2 style="margin-bottom:2rem;">درباره هوش‌تک</h2>
+            <div class="about-content">
+                <p><strong>هوش‌تک (Hoosh Tech)</strong> یک رسانه فناوری کاملاً خودکار و پیشرو است که با عشق و تخصص توسط <strong>شهریار وزیری نسب</strong> طراحی و ساخته شده است. هدف ما ایجاد پنجره‌ای شفاف و جذاب به دنیای پیچیده فناوری است؛ جایی که انسان و هوش مصنوعی دست در دست هم، محتوایی ارزشمند و به‌روز خلق می‌کنند.</p>
+                <p>در هوش‌تک، همه چیز – از تولید محتوا گرفته تا مدیریت سایت و پاسخگویی به کاربران – توسط الگوریتم‌های هوشمند انجام می‌شود. ما باور داریم که آینده رسانه‌ها در خودکارسازی هوشمند نهفته است و می‌خواهیم این آینده را امروز زندگی کنیم.</p>
+                <p><strong>راهنمای سریع:</strong></p>
+                <ul style="margin-right:2rem;">
+                    <li><strong>خانه:</strong> جدیدترین مقالات و تحلیل‌ها</li>
+                    <li><strong>مقالات:</strong> آرشیو کامل با جستجو و فیلتر</li>
+                    <li><strong>مقایسه:</strong> ابزاری برای مقایسه تخصصی محصولات دیجیتال</li>
+                    <li><strong>دستیار هوش مصنوعی (دکمه شناور):</strong> پاسخگوی پرسش‌های فناوری شما</li>
+                </ul>
+                <p style="margin-top:2rem; font-style:italic;">«هوش‌تک، رسانه‌ای که هرگز نمی‌خوابد.»</p>
+            </div>
+        </div>
+    </div>
 
-// بارگذاری مقالات
-let allArticles = [];
-async function loadArticles() {
-    try {
-        const response = await fetch('articles.json');
-        if (!response.ok) throw new Error('خطا در دریافت فایل');
-        allArticles = await response.json();
+    <!-- AI Assistant -->
+    <div class="ai-bubble" id="aiBubble" onclick="openChat()"><i class="fas fa-robot"></i></div>
+    <div class="chat-overlay" id="chatOverlay">
+        <div class="chat-container">
+            <div style="padding:1rem; background:rgba(108,99,255,0.4); display:flex; justify-content:space-between;">
+                <span style="color:white; font-weight:bold;">دستیار هوش مصنوعی</span>
+                <button style="background:none;border:none;color:white;font-size:1.5rem;" onclick="closeChat()">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg bot">سلام! هر سوالی در زمینه فناوری داری، بپرس.</div>
+            </div>
+            <div style="padding:0.8rem; display:flex; gap:0.5rem;">
+                <input type="text" id="chatInput" placeholder="سوال خود را..." style="flex:1; padding:0.8rem; border-radius:50px; border:1px solid var(--glass-border); background: var(--bg);">
+                <button class="btn btn-primary" onclick="sendMessage()">ارسال</button>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top:4rem; background:var(--footer-bg); backdrop-filter:blur(20px); padding:2rem; text-align:center; color:white; border-top:1px solid var(--glass-border);">
+        <p>© ۲۰۲۶ هوش‌تک | تمامی حقوق متعلق به شهریار وزیری نسب است.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="articles.js"></script>
+    <script>
+        particlesJS('particles-js', { particles: { number:{value:50}, size:{value:3}, color:{value:'#6C63FF'}, opacity:{value:0.15}, line_linked:{enable:true, opacity:0.08}, move:{speed:1} } });
+
+        let currentLang = 'fa';
+        function setLanguage(lang) {
+            currentLang = lang;
+            const trans = {
+                fa: { heroTitle:'آینده را با هوش‌تک کاوش کنید', heroDesc:'رسانه فناوری خودکار با قدرت هوش مصنوعی', viewArticles:'مشاهده مقالات', latestArticles:'جدیدترین مقالات', articles:'مقالات', about:'درباره ما', search:'جستجو...', all:'همه', loading:'در حال بارگذاری...' },
+                en: { heroTitle:'Explore the Future with Hoosh Tech', heroDesc:'Automated Tech Media Powered by AI', viewArticles:'Browse Articles', latestArticles:'Latest Articles', articles:'Articles', about:'About Us', search:'Search...', all:'All', loading:'Loading...' }
+            };
+            document.getElementById('heroTitle').textContent = trans[lang].heroTitle;
+            document.getElementById('heroDesc').textContent = trans[lang].heroDesc;
+            document.querySelector('#home .btn-primary').textContent = trans[lang].viewArticles;
+            document.querySelector('h2.section-title').textContent = trans[lang].latestArticles;
+            document.getElementById('searchInput').placeholder = trans[lang].search;
+            document.querySelector('#categoryFilter option[value="all"]').textContent = trans[lang].all;
+            localStorage.setItem('hooshLang', lang);
+        }
+        const savedLang = localStorage.getItem('hooshLang') || 'fa';
+        setLanguage(savedLang);
+
+        function setDarkMode() { document.body.classList.add('dark-mode'); localStorage.setItem('dark','true'); }
+        function setLightMode() { document.body.classList.remove('dark-mode'); localStorage.setItem('dark','false'); }
+        if (localStorage.getItem('dark') === 'true') document.body.classList.add('dark-mode');
+
+        function toggleMobileMenu() { document.getElementById('mobileMenuOverlay').classList.toggle('active'); }
+        function closeMobileMenu() { document.getElementById('mobileMenuOverlay').classList.remove('active'); }
+
+        function openSettings() { document.getElementById('settingsModal').classList.add('active'); }
+        function closeSettings() { document.getElementById('settingsModal').classList.remove('active'); }
+
+        let currentPageName = 'home';
+        function navigate(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(page).classList.add('active');
+            currentPageName = page;
+            if (page === 'articles') initArticleList();
+            if (page === 'home') renderTrending();
+            window.scrollTo({top:0,behavior:'smooth'});
+            closeMobileMenu();
+        }
+
+        function createArticleCard(article) {
+            const title = article.title?.fa || article.title;
+            const excerpt = article.excerpt?.fa || article.excerpt;
+            const icon = {AI:'robot', Programming:'code', Phone:'mobile-alt', Laptop:'laptop', BuyingGuide:'shopping-cart'}[article.category] || 'laptop-code';
+            return `<div class="article-card" onclick="showArticleDetail(${article.id})">
+                <div class="article-img"><i class="fas fa-${icon}"></i></div>
+                <div class="article-body">
+                    <span class="article-tag">${article.category||''}</span>
+                    <h3>${title}</h3>
+                    <p>${excerpt}</p>
+                    <small>${article.date||''}</small>
+                </div>
+            </div>`;
+        }
+
+        function renderTrending() {
+            const grid = document.getElementById('latestGrid');
+            if (!grid) return;
+            grid.innerHTML = allArticles.slice(0,6).map(createArticleCard).join('');
+        }
+
+        let filteredIds = [];
+        let articlesPerPage = 12;
+        let currentArticlePage = 1;
+        function initArticleList() {
+            const search = (document.getElementById('searchInput')?.value || '').toLowerCase();
+            const cat = document.getElementById('categoryFilter')?.value || 'all';
+            filteredIds = allArticles.filter(a => {
+                const title = (a.title?.fa || a.title || '').toLowerCase();
+                const excerpt = (a.excerpt?.fa || a.excerpt || '').toLowerCase();
+                return (search === '' || title.includes(search) || excerpt.includes(search)) && (cat === 'all' || a.category === cat);
+            }).map(a => a.id);
+            currentArticlePage = 1;
+            renderArticles();
+        }
+        function renderArticles() {
+            const container = document.getElementById('articlesContainer');
+            const start = (currentArticlePage-1)*articlesPerPage;
+            const pageIds = filteredIds.slice(start, start+articlesPerPage);
+            container.innerHTML = pageIds.length ? pageIds.map(id => {
+                const a = allArticles.find(x => x.id === id);
+                return a ? createArticleCard(a) : '';
+            }).join('') : '<p>مقاله‌ای یافت نشد.</p>';
+            renderPagination(Math.ceil(filteredIds.length/articlesPerPage));
+        }
+        function renderPagination(total) {
+            let html = '';
+            for (let i=1; i<=total; i++) html += `<button class="page-btn ${i===currentArticlePage?'active':''}" onclick="goToPage(${i})">${i}</button>`;
+            document.getElementById('pagination').innerHTML = html;
+        }
+        function goToPage(p) { currentArticlePage=p; renderArticles(); window.scrollTo({top:200,behavior:'smooth'}); }
+        function filterArticles() { initArticleList(); }
+
+        function showArticleDetail(id) {
+            const a = allArticles.find(x => x.id === id);
+            if (!a) return;
+            navigate('articleDetail');
+            document.getElementById('articleDetailContent').innerHTML = `
+                <h1>${a.title?.fa || a.title}</h1>
+                <p style="color:var(--gray);">${a.date||''} | ${a.category||''}</p>
+                <div style="margin-top:2rem;">${a.body?.fa || a.body}</div>
+                <button class="btn btn-primary" onclick="navigate('articles')" style="margin-top:2rem;">بازگشت به مقالات</button>
+            `;
+            window.addEventListener('scroll', ()=>{
+                document.getElementById('readingProgress').style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
+            });
+        }
+
+        function openChat() { document.getElementById('chatOverlay').classList.add('active'); }
+        function closeChat() { document.getElementById('chatOverlay').classList.remove('active'); }
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const msg = input.value.trim(); if(!msg) return;
+            const div = document.getElementById('chatMessages');
+            div.innerHTML += `<div class="chat-msg user">${msg}</div>`;
+            input.value = '';
+            setTimeout(() => {
+                div.innerHTML += `<div class="chat-msg bot">متشکرم! برای پاسخ‌های هوشمندتر می‌توانی کلید Gemini API را در آینده اضافه کنی.</div>`;
+                div.scrollTop = div.scrollHeight;
+            }, 500);
+        }
+
+        // Init
         renderTrending();
-        if (currentPage === 'articles') initArticleList();
-    } catch (error) {
-        console.error('بارگذاری مقالات شکست خورد:', error);
-        document.getElementById('latestGrid').innerHTML = '<p>خطا در بارگذاری مقالات. مطمئن شوید فایل articles.json در کنار index.html قرار دارد.</p>';
-    }
-}
-
-// رندر کارت مقاله
-function createArticleCard(article) {
-    const title = article.title?.fa || article.title;
-    const excerpt = article.excerpt?.fa || article.excerpt;
-    const icon = {AI:'robot', Programming:'code', Phone:'mobile-alt', Laptop:'laptop', BuyingGuide:'shopping-cart'}[article.category] || 'laptop-code';
-    return `<div class="article-card" onclick="showArticleDetail(${article.id})">
-        <div class="article-img"><i class="fas fa-${icon}"></i></div>
-        <div class="article-body">
-            <span class="article-tag">${article.category||''}</span>
-            <h3>${title}</h3>
-            <p>${excerpt}</p>
-            <small>${article.date||''}</small>
-        </div>
-    </div>`;
-}
-
-// صفحه اصلی
-function renderTrending() {
-    const grid = document.getElementById('latestGrid');
-    if (!grid) return;
-    const articlesToShow = allArticles.slice(0, 6);
-    grid.innerHTML = articlesToShow.map(createArticleCard).join('');
-}
-
-// ناوبری
-let currentPage = 'home';
-function navigate(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(page).classList.add('active');
-    currentPage = page;
-    if (page === 'articles') initArticleList();
-    window.scrollTo(0,0);
-    closeMobileMenu();
-}
-
-// فیلتر و صفحه‌بندی مقالات
-let filteredIds = [];
-let articlesPerPage = 12;
-let currentArticlePage = 1;
-
-function initArticleList() {
-    const search = (document.getElementById('searchInput')?.value || '').toLowerCase();
-    const cat = document.getElementById('categoryFilter')?.value || 'all';
-    filteredIds = allArticles.filter(a => {
-        const title = (a.title?.fa || a.title || '').toLowerCase();
-        const excerpt = (a.excerpt?.fa || a.excerpt || '').toLowerCase();
-        return (search === '' || title.includes(search) || excerpt.includes(search)) && (cat === 'all' || a.category === cat);
-    }).map(a => a.id);
-    currentArticlePage = 1;
-    renderArticles();
-}
-
-function renderArticles() {
-    const container = document.getElementById('articlesContainer');
-    if (!container) return;
-    const start = (currentArticlePage-1) * articlesPerPage;
-    const pageIds = filteredIds.slice(start, start+articlesPerPage);
-    container.innerHTML = pageIds.length ? pageIds.map(id => {
-        const a = allArticles.find(x => x.id === id);
-        return a ? createArticleCard(a) : '';
-    }).join('') : '<p>مقاله‌ای یافت نشد.</p>';
-    renderPagination(Math.ceil(filteredIds.length / articlesPerPage));
-}
-
-function renderPagination(total) {
-    let html = '';
-    for (let i=1; i<=total; i++) html += `<button class="page-btn ${i===currentArticlePage?'active':''}" onclick="goToPage(${i})">${i}</button>`;
-    document.getElementById('pagination').innerHTML = html;
-}
-function goToPage(p) { currentArticlePage=p; renderArticles(); window.scrollTo({top:200,behavior:'smooth'}); }
-function filterArticles() { initArticleList(); }
-
-function showArticleDetail(id) {
-    const a = allArticles.find(x => x.id === id);
-    if (!a) return;
-    navigate('articleDetail');
-    document.getElementById('articleDetailContent').innerHTML = `
-        <h1>${a.title?.fa || a.title}</h1>
-        <p style="color:var(--gray);">${a.date||''} | ${a.category||''}</p>
-        <div style="margin-top:2rem;">${a.body?.fa || a.body}</div>
-        <button class="btn btn-primary" onclick="navigate('articles')">بازگشت به مقالات</button>
-    `;
-    window.addEventListener('scroll', ()=>{
-        document.getElementById('readingProgress').style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
-    });
-}
-
-// چت ساده
-function openChat() { document.getElementById('chatOverlay').classList.add('active'); }
-function closeChat() { document.getElementById('chatOverlay').classList.remove('active'); }
-function sendMessage() {
-    const input = document.getElementById('chatInput');
-    const msg = input.value.trim(); if(!msg) return;
-    const div = document.getElementById('chatMessages');
-    div.innerHTML += `<div class="chat-msg user">${msg}</div>`;
-    input.value = '';
-    setTimeout(() => {
-        div.innerHTML += `<div class="chat-msg bot">متشکرم! من یک دستیار ساده هستم. برای پاسخ‌های هوشمندتر، کلید Gemini API را اضافه کنید.</div>`;
-        div.scrollTop = div.scrollHeight;
-    }, 500);
-}
-
-// شروع
-loadArticles();
-navigate('home');
-</script>
+        navigate('home');
+        window.addEventListener('scroll', ()=>{
+            document.getElementById('aiBubble').classList.toggle('show', window.scrollY>400);
+            document.getElementById('readingProgress').style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
+        });
+    </script>
 </body>
 </html>
